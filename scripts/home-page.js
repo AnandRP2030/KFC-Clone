@@ -1,6 +1,6 @@
 // Image Slider
 
-var img = document.getElementById('img');
+var img = document.querySelector('.img');
 
 var slides = ["https://images.ctfassets.net/wtodlh47qxpt/4wzmNLWjqVZZl95Fcf48r2/90bd1294b970f903545d8f0f5278b28a/Allu_Arjun_Combo_Meal__1440x396px.jpg?w=1366&fit=fill&fm=webp","https://images.ctfassets.net/wtodlh47qxpt/4gztBB8yAvtp6jV7JAuLD/093fddbb77a78a44a4d3d5e066c592de/KFC_Peri_Peri_Banner__1440x396px.jpg?w=1366&fit=fill&fm=webp","https://images.ctfassets.net/wtodlh47qxpt/500GRYvL6xfLzNRY68rr4u/c66030e22aa477594939c55281fc00fd/variety_bucket_banner_1440x396px.jpg?w=1366&fit=fill&fm=webp", "https://images.ctfassets.net/wtodlh47qxpt/2cKs5e17FbKIE7Dza5ZlNM/e7163ee02d91d59d81a20ecf606f707b/Biryani_Banner_1440x396px.jpg?w=1366&fit=fill&fm=webp", "https://images.ctfassets.net/wtodlh47qxpt/4qo6xWTWQmjg8ycSRETMU5/649a454a732e77c4cc534524e48bd800/Box_Meals_App_Banner__1440x396px.jpg?w=1366&fit=fill&fm=webp"];
 
@@ -62,7 +62,7 @@ var catgData=[{
 }]
 displayCatg()
 function displayCatg(){
-    var catg=document.getElementById("disp-catg")
+    var catg=document.querySelector(".disp-catg")
     catgData.map((ele)=>{
         let div=document.createElement("div")
         div.onclick=function(){
