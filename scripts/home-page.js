@@ -1,3 +1,8 @@
+//navbar import
+
+import {navbar} from "../components/navbar/navbar.js";
+document.querySelector(".navbar").innerHTML = navbar();
+
 // Image Slider
 
 var img = document.querySelector('.img');
