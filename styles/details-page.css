@@ -168,14 +168,15 @@ body {
     position: relative;
     top: 142px;
     left: 97px;
+    width: 30%;   
 }
-
 /* beverage  */
 .beverage-head{
     position: relative;
     font-family: 'National 2 Condensed', sans-serif;
     top: 196px;
     left: 97px;
+    width: 30%;
 
 }
 
