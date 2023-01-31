@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KFC-Clone</title>
-</head>
-<body>
-    <h1>home page</h1>
-    
-    
-</body>
+
+
+    <link rel="stylesheet" href="./styles/home-page.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="navbar"></div>
+
+    <!--image slider start-->
+    <div class="slider">
+      <div class="img">
+        <img
+          src="https://images.ctfassets.net/wtodlh47qxpt/3Q9nVrzAkO9gXkxk2OqKFS/c4077fb9cd4da6918f5363959a69e53b/Chizza_Banner_1440x396_delviery.jpg?w=1366&fit=fill&fm=webp"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- Heading div -->
+    <div class="heading">
+      <img
+        class="redline1"
+        src="https://images.ctfassets.net/wtodlh47qxpt/E2WVSq4FOeSCRAGy6LZZa/11c68fb3611baabb79e0ae892338098d/3_Strips.png"
+        alt=""
+      />
+      <p class="msg">WELCOME <span> TO KFC!</span></p>
+      <a class="account-nav" href=""></a>
+    </div>
+
+    <!-- Categories section -->
+    <div class="cat-main">
+      <h3>BROWSE CATGORIES</h3>
+      <hr />
+      <div class="disp-catg"></div>
+    </div>
+
+    <!-- Offers section -->
+    <div class="offers-main">
+      <img
+        class="redline2"
+        src="https://images.ctfassets.net/wtodlh47qxpt/E2WVSq4FOeSCRAGy6LZZa/11c68fb3611baabb79e0ae892338098d/3_Strips.png"
+        alt=""
+      />
+      <div class="offers-head">
+        <h3>OFFERS & DEALS</h3>
+        <p><a href="./scripts/deals-page.js">View All Deals →</a></p>
+      </div>
+      <div class="disp-offers"></div>
+    </div>
+  </body>
+  <script src="./scripts/home-page.js" type="module"></script>
 </html>
