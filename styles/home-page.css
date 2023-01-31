@@ -1,0 +1,229 @@
+@import url(//db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed);
+
+/* body */
+body{
+    margin: 0;
+    font-family: "National 2 Condensed";
+}
+/* navbar */
+
+.navbar{
+    position:fixed;
+    display: flex;
+    justify-content: space-between;   
+    background-color: white;
+    width: 100%;
+    padding: 25px 11% 25px 6%;
+    box-sizing: border-box;
+    height: 103px;
+    font-family: sans-serif;
+    font-weight: 550;
+    z-index: 10;
+    font-size: .85rem;
+    margin-bottom: 100px;
+    top: 0;   
+}
+
+.nav-checkbtn{
+    display: none;
+}
+
+.navbar *{
+    cursor: pointer;
+}
+
+.navbar-left{
+    display: flex;
+    height: 52px;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+}
+
+.navbar-left *{
+    margin: 0;
+}
+.navbar-left>img{
+    width:65px;
+}
+
+.navbar-right{
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;   
+}
+.navbar-right *{
+    margin: 0;
+}
+
+.man-icon{
+    width: 10%;
+}
+
+.navbar-right>img:last-child{
+    width: 50px;
+}
+
+.account{
+    border-right: 1px solid rgb(175, 175, 175);
+    padding-right: 10px;
+    height: 17px;
+}
+
+.sample-body{
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+}
+
+
+@media screen and (max-width: 800px){
+   
+    .nav-checkbtn {
+        display: block;
+    }
+
+    .hide-item{
+        display: none;
+    }
+    .navbar-right>img:last-child{
+        width: 40px;
+    }
+
+    .navbar-left{
+        justify-content: space-between;
+        align-items: center;
+        width: 56%;
+    }
+
+    .navbar-left>img{
+        width: 60px;
+    }
+}
+
+/* Slideshow image */
+.slider{
+    position: relative;
+    margin-top: 100px;
+}
+.img>img{
+    width:100%;
+    height: 350px;
+}
+
+/* Redline image */
+.redline1{
+    width: 40px;
+    height: 25px;
+    margin-left: 180px;
+    background-color: #f8f7f5;
+}
+
+/* categories section */
+.heading{
+    width:100%;
+    height:100px;
+    background-color: #f8f7f5;
+    position:relative;
+    padding-bottom: 70px;
+    margin-top: -4px;
+    color:  #202124;
+}
+.msg{
+    font-family: "National 2 Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: #202124;
+    margin-top: 29.71px;
+    margin-bottom: 30px;
+
+}
+.cat-main{
+  width:81%;
+  position:relative;
+  margin: auto;
+}
+hr {
+  height: 0.2px;
+  background-color: #e3e3e3;
+  float: right;
+  width: 60%;
+  margin-left: 410px;
+  margin-top: -55px;
+  position: absolute;
+  opacity: .5;
+}
+.cat-main > h3{
+    margin-right: 31px;
+    font-family: "National 2 Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 43px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #202124;
+    margin-top: 100px;
+    margin-bottom: 55px;
+    /* font-family: "National 2 Condensed";
+    line-height: 43px;
+    font-size:30px;
+    font-weight:800;
+    color:  #202124; */
+}
+.disp-catg{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-top: 80px;
+}
+.disp-catg >div>img{
+    width: 240px;
+    height: 180px;
+    border-radius: 3px;
+}
+.disp-catg >div>h3{
+    text-align: center;
+    color:  #202124;
+    font-family: "National 2 Condensed";
+    font-size:1rem;
+    font-weight:800;
+}
+
+/* Offers section */
+.redline2{
+    width: 80px;
+    height: 40px;
+    margin-left: 200px;
+}
+.offers-main{
+background-color: rgb(32,33,36);
+height: 900px;
+margin-top: 100px;
+}
+.offers-head{
+    display: flex;
+    margin-left: 200px;
+}
+.offers-main >div >h3{
+    font-family: "National 2 Condensed";
+    line-height: 43px;
+    font-size:30px;
+    font-weight:800;
+    color:  white;
+}
+.offers-main >div >p {
+    text-align:center;
+   margin-left: 570px;
+   margin-top: 35px;
+}
+.offers-main >div >p >a{
+    font-family: "National 2 Condensed";
+    line-height: 30px;
+    text-decoration: none;
+    color:  white;
+}
