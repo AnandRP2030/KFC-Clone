@@ -36,7 +36,7 @@
           <li><a href="#EXCLUSIVE">EXCLUSIVE DEAL</a></li>
           <li><a href="#CHIZZA">CHIZZA</a></li>
           <li><a href="#CHICKEN">CHICKEN BUCKETS</a></li>
-          <li><a href="#NEW"></a>NEW LAUNCH</li>
+          <li><a href="#NEW">NEW LAUNCH</a></li>
           <li><a href="#BIRYANI">BIRYANI BUCKETS</a></li>
           <li><a href="#BOX">BOX MEALS</a></li>
           <li><a href="#BURGERS">BURGERS</a></li>
@@ -46,20 +46,29 @@
       </div>
 
       <div id="product-items">
-        <div class="search-box">
-          <button id="btn-search">
-            <img
-              src="	https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg"
-              alt=""
-            />
-            <input
-              type="textbox"
-              id="search-value"
-              placeholder="Search our menu..."
-            />
-          </button>
-        </div>
         <div>
+          <div class="search-box">
+            <button>
+              <img
+                id="btn-search"
+                src="	https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg"
+                alt=""
+              />
+              <input
+                type="textbox"
+                id="search-value"
+                placeholder="Search our menu..."
+              />
+              <img
+                id="clear-search"
+                src="https://online.kfc.co.in/static/media/Darkclosebutton.b4eeaeca.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+        <div class="query-results"></div>
+        <div id="query-div">
           <div id="EXCLUSIVE">
             <h2>EXCLUSIVE DEAL</h2>
             <div class="menu-card">
@@ -111,10 +120,10 @@
               <!-- Append CHIZZA Here -->
             </div>
           </div>
-          <!-- --------------------------------------------------CHICKEN-------------------------------------- -->
+          <!-- --------------------------------------------------CHICKEN BUCKETS-------------------------------------- -->
           <div id="CHICKEN">
             <div>
-              <h1 class="card_header_title">CHICKEN</h1>
+              <h1 class="card_header_title">CHICKEN BUCKETS</h1>
             </div>
             <div class="card_container">
               <!-- Append CHIZZA Here -->
