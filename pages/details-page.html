@@ -72,8 +72,10 @@
           <div class="qty-div">
             <p>Quantity</p>
             <div>
-              <span class="material-symbols-outlined qty-increment"> add_circle </span>
-              <span class="qty-count">  </span>
+              <span class="material-symbols-outlined qty-increment">
+                add_circle
+              </span>
+              <span class="qty-count"> </span>
 
               <i id="circle-min" class="fa fa-circle-minus qty-decrement"></i>
             </div>
@@ -103,22 +105,32 @@
       </div>
     </div>
 
-    
-    <div class="delivery-option">
-      <div class="deliver-option-head">START YOUR ORDER </div>
+    <div class="delivery-options-container">
+      <div class="delivery-option-head">START YOUR ORDER</div>
       <div class="delivery-option-description">
-        <h1>LET'S GET STARTED. WOULD YOU LIKE PICKUP OR DELIVERY?</h1>
-        <p> Menu availability and pricing may vary between order types.</p>
-        </div>
+        <h1>
+          LET'S GET STARTED. WOULD <br />
+          YOU LIKE PICKUP OR <br />
+          DELIVERY?
+        </h1>
+        <p>Menu availability and pricing may vary between order types.</p>
+      </div>
 
-        <div class="deliver-image">
-          
+      <div class="or-div">OR</div>
+
+      <div class="delivery-image">
+        <div class="delivery-img-left">
+          <img src="../components/Images/delivery-bag.svg" alt="bag" />
+          <button class="quick-pick-btn">  QUICK PICK UP</button>
         </div>
+        
+        <div class="delivery-img-right">
+          <img src="../components/Images/delivery-car.svg" alt="car" />
+          <button class="delivery-btn">  DELIVERY </button>
+        </div>
+      </div>
     </div>
-    
- 
-    
-    
+
     <script type="module" src="../scripts/details-page.js"></script>
   </body>
 </html>
