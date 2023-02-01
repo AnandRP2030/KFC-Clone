@@ -1,4 +1,4 @@
-/* Global CSS */
+/* -------------------------------------------- Global CSS */
 body,
 html {
   scroll-behavior: smooth;
@@ -38,7 +38,7 @@ a:active {
   color: #202124;
   font-weight: 700;
 }
-/* Global CSS */
+/* -------------------------------------------- Global CSS */
 
 #menupage-body {
   display: flex;
@@ -55,7 +55,6 @@ a:active {
 
 #menu-item {
   width: 328px;
-  top: 100px;
 }
 
 #product-items {
@@ -144,6 +143,7 @@ a:active {
   background-color: black;
   border-radius: 50%;
   display: inline-block;
+  margin: 0px 8px;
 }
 
 #btn-Addtocart {
@@ -198,7 +198,7 @@ a:active {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-/* CARD CSS */
+/* -------------------------------------------- CARD CSS */
 .card_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -211,7 +211,8 @@ a:active {
 }
 .card {
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .card .card_img img {
   border-top-left-radius: 8px;
@@ -242,8 +243,15 @@ a:active {
 .btn_addtoCart img {
   padding-left: 10px;
 }
-/* CARD CSS */
+/* -------------------------------------------- CARD CSS */
 
-#CHIZZA {
+#CHIZZA,
+#CHICKEN,
+#NEW,
+#BIRYANI,
+#BOX,
+#BURGERS,
+#SNACKS,
+#BEVERAGES {
   padding-top: 50px;
 }
