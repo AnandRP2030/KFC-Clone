@@ -72,16 +72,18 @@
           <div class="qty-div">
             <p>Quantity</p>
             <div>
-              <span class="material-symbols-outlined"> add_circle </span>
-              <span class="qty-count"> 1 </span>
+              <span class="material-symbols-outlined qty-increment">
+                add_circle
+              </span>
+              <span class="qty-count"> </span>
 
-              <i id="circle-min" class="fa fa-circle-minus"></i>
+              <i id="circle-min" class="fa fa-circle-minus qty-decrement"></i>
             </div>
           </div>
         </div>
 
         <div class="pick-store-btn">
-          <button>Pick Store For Price</button>
+          <button class="buy-btn">Pick Store For Price</button>
         </div>
       </div>
     </div>
@@ -100,6 +102,37 @@
           alt="side-dish"
         />
         <p>Secret Receipe</p>
+      </div>
+    </div>
+
+    <div class="delivery-options-container">
+      <div class="delivery-option-head">
+        START YOUR ORDER
+        <button class="close-delivery-btn">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
+      </div>
+      <div class="delivery-option-description">
+        <h1>
+          LET'S GET STARTED. WOULD <br />
+          YOU LIKE PICKUP OR <br />
+          DELIVERY?
+        </h1>
+        <p>Menu availability and pricing may vary between order types.</p>
+      </div>
+
+      <div class="or-div">OR</div>
+
+      <div class="delivery-image">
+        <div class="delivery-img-left">
+          <img src="../components/Images/delivery-bag.svg" alt="bag" />
+          <button class="quick-pick-btn">QUICK PICK UP</button>
+        </div>
+
+        <div class="delivery-img-right">
+          <img src="../components/Images/delivery-car.svg" alt="car" />
+          <button class="delivery-btn">DELIVERY</button>
+        </div>
       </div>
     </div>
 
