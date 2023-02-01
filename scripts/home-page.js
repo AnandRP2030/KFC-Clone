@@ -29,42 +29,35 @@ setInterval(slider,2000);
 var catgData=[{
     img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT208.jpg?ver=25.08",
     title:"EXCLUSIVE DEAL",
-    link:""
 },
 {
     img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=25.08",
     title:"CHICKEN BUCKETS",
-    link:""
 },
 {
     img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT200.jpg?ver=25.08",
     title:"NEW LAUNCH",
-    link:""
 },
 {
     img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT190.jpg?ver=25.08",
     title:"BIRIYANI BUCKETS",
-    link:""
 },{
     img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT158.jpg?ver=25.08",
     title:"BOX MEAL",
-    link:""
 },
 {
     img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT99.jpg?ver=25.08",
     title:"BURGERS",
-    link:""
 },
 {
     img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT89.jpg?ver=25.08",
     title:"SNACKS",
-    link:""
 },
 {
     img:"https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg",
     title:"View All Menu →",
-    link:""
 }]
+
 displayCatg()
 function displayCatg(){
     var catg=document.querySelector(".disp-catg")
