@@ -350,10 +350,13 @@ hr {
     width:447px;
   }
   .footer-div td {
- 
+    cursor: pointer;
     font-size: 13px;
     text-align: left;
     padding:6px 0;
+  }
+  td:hover{
+    text-decoration: underline;
   }
   .location{
     margin-top: -140px;
