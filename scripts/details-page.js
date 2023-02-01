@@ -193,3 +193,15 @@ closeDivBtn.onclick = function (){
 
     deliveryContainer.classList.remove("display-block");
 }
+
+
+// redirect to address page
+let quickPick = document.querySelector(".quick-pick-btn");
+quickPick.onclick = function (){
+  window.location.href = "../pages/address-page.html"
+}
+
+let deliveryPick = document.querySelector(".delivery-btn");
+deliveryPick.onclick = function (){
+  window.location.href = "../pages/address-page.html"
+}
