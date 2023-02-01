@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ! NavBar Section */
+.navbar {
+    /* background-color: gray; */
+    height: 100px;
+}
+.head-logo{
+    border-style: none;
+    width: 200px;
+}
+/* .cart{
+    position: relative;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.Cart-number{
+    position: absolute;
+    top: -25px;
+    right: -15px;
+    padding: 2px;
+    background-color:red;
+} */
+
+/* !Cart Css */
+#head-cart {
+    padding: 0;
+    margin-top: 120px;
+    margin-bottom: 20px;
+
+}
+
+#Contain-cart-order {
+    display: flex;
+    flex-direction: row;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    gap: 50px;
+}
+
+#outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+img {
+    height: 130px;
+}
+
+#inner-cart-box {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f7f5;
+    border-radius: 5px;
+    ;
+    font-size: 1rem;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+
+.Contains-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    margin: 10px;
+}
+
+.Inc-Dec-button {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+}
+
+.bi-dash-circle-fill{
+    font-size: 20px;
+    margin-right:10px;
+ }
+ .bi-plus-circle-fill{
+     font-size: 20px;
+     margin-left:10px;
+ }
+ .quantity{
+     font-size: 20px;
+ }
+
+.price {
+    margin: auto;
+}
+
+.delete-item {
+    margin: auto;
+}
+
+
+/* !Right Side */
+.order-summary {
+    box-shadow: 0 4px 9px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 25%;
+    margin-left: 40px;
+    padding: 40px;
+    height: fit-content;
+}
+
+.items-count {
+    padding: 15px;
+}
+
+.coupon-box {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.subtotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gst {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+.donate-box {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 25%;
+    height: 25%;
+}
+
+.checkout {
+    width: 85%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e4002b;
+}
