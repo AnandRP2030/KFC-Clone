@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- outside-css-links  -->
+    <link rel="stylesheet" href="../components/navbar/navbar.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
     </style>
@@ -11,11 +13,18 @@
       rel="icon"
       href="https://cdn.iconscout.com/icon/free/png-256/kfc-2-226243.png?w=128&f=avif"
     />
+    <!-- menu-page-css links -->
     <link rel="stylesheet" href="../styles/menu.css" />
     <title>Menu</title>
   </head>
   <body>
-    <nav class="navbar"></nav>
+    <div class="navbar">
+      <!-- Append Navbar Here -->
+    </div>
+    <div id="order-banner">
+      LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
+      <button class="btn_order">Start Order</button>
+    </div>
     <div id="menupage-body">
       <div id="menu-items">
         <img
@@ -24,15 +33,15 @@
         />
         <h1>KFC Menu</h1>
         <ul>
-          <li>EXCLUSIVE DEAL</li>
-          <li>CHIZZA</li>
-          <li>CHICKEN BUCKETS</li>
-          <li>NEW LAUNCH</li>
-          <li>BIRYANI BUCKETS</li>
-          <li>BOX MEALS</li>
-          <li>BURGERS</li>
-          <li>SNACKS</li>
-          <li>BEVERAGES</li>
+          <li><a href="#EXCLUSIVE">EXCLUSIVE DEAL</a></li>
+          <li><a href="#CHIZZA">CHIZZA</a></li>
+          <li><a href="#CHICKEN">CHICKEN BUCKETS</a></li>
+          <li><a href="#NEW"></a>NEW LAUNCH</li>
+          <li><a href="#BIRYANI">BIRYANI BUCKETS</a></li>
+          <li><a href="#BOX">BOX MEALS</a></li>
+          <li><a href="#BURGERS">BURGERS</a></li>
+          <li><a href="#SNACKS">SNACKS</a></li>
+          <li><a href="#BEVERAGES">BEVERAGES</a></li>
         </ul>
       </div>
 
@@ -60,25 +69,27 @@
                   alt=""
                 />
               </div>
-              <div class="menu_card_title">The Allu Arjun Combo</div>
-              <div>
-                <span
-                  ><img
-                    src="	https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg"
-                    alt=""
-                  />
-                </span>
-                <span>Non veg</span>
-                <span class="dot"></span>
-                <span>Serves 2</span>
-              </div>
-              <div>
-                <span class="strikoff_price">₹523.00</span>
-                <span class="price">₹448.57</span>
-              </div>
-              <div>
-                Try Allus fav-1 Hot & Crispy Chicken,1 Smoky Red, Reg Popcorn,
-                Spicy Fries & 1 Dip 20gm
+              <div class="menu_card_details">
+                <div class="menu_card_title">The Allu Arjun Combo</div>
+                <div>
+                  <span
+                    ><img
+                      src="	https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg"
+                      alt=""
+                    />
+                  </span>
+                  <span>Non veg</span>
+                  <span class="dot"></span>
+                  <span>Serves 2</span>
+                </div>
+                <div>
+                  <span class="strikoff_price">₹523.00</span>
+                  <span class="price">₹448.57</span>
+                </div>
+                <div>
+                  Try Allus fav-1 Hot & Crispy Chicken,1 Smoky Red, Reg Popcorn,
+                  Spicy Fries & 1 Dip 20gm
+                </div>
               </div>
               <div>
                 <button id="btn-Addtocart">
@@ -91,19 +102,62 @@
               </div>
             </div>
           </div>
-          <!-- <div class="CHIZZA-items">
-            <div></div>
-            <div></div>
+
+          <!-- ------------------------------------------------------------------------------------------------------------------------------------------>
+          
+          <div id="CHIZZA">
+            <div>
+              <h1 class="card_header_title">CHIZZA</h1>
+            </div>
+            <div id="cc-CHIZZA" class="card_container">
+              <!-- --------------Card Start-------------->
+              <!-- <div class="card">
+                <div class="card_img">
+                  <img
+                    src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K754.jpg?ver=25.08"
+                    alt=""
+                  />
+                </div>
+                <div class="card_details">
+                  <div class="card_details_title">The Allu Arjun Combo</div>
+                  <div>
+                    <span
+                      ><img
+                        src="	https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg"
+                        alt=""
+                      />
+                    </span>
+                    <span>Non veg</span>
+                    <span class="dot"></span>
+                    <span>Serves 2</span>
+                  </div>
+                  <div>
+                    <span class="strikoff_price">₹523.00</span>
+                    <span class="price">₹448.57</span>
+                  </div>
+                  <div>
+                    Try Allus fav-1 Hot & Crispy Chicken,1 Smoky Red, Reg
+                    Popcorn, Spicy Fries & 1 Dip 20gm
+                  </div>
+                </div>
+                <div class="card_btn_div">
+                  <button class="btn_addtoCart">
+                    Add To Cart
+                    <img
+                      src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div> -->
+              <!-- --------------Card End-------------->
+            </div>
           </div>
-          <div id="exclusive-items"></div>
-          <div id="exclusive-items"></div>
-          <div id="exclusive-items"></div>
-          <div id="exclusive-items"></div>
-          <div id="exclusive-items"></div> -->
+          <!-- --------------------------------------------------------->
         </div>
       </div>
     </div>
   </body>
 </html>
-<!-- <script type="module" src="navbar.js"></script> -->
-<script src="../scripts/menu.js"></script>
+
+<script type="module" src="../scripts/menu.js"></script>

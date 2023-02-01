@@ -1,3 +1,9 @@
+/* Global CSS */
+body,
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -22,10 +28,17 @@ li {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-nav {
-  height: 171px;
-  background-color: #202124;
+a {
+  color: #494949;
+  text-decoration: none;
 }
+
+a:active {
+  font-size: 18px;
+  color: #202124;
+  font-weight: 700;
+}
+/* Global CSS */
 
 #menupage-body {
   display: flex;
@@ -42,12 +55,12 @@ nav {
 
 #menu-item {
   width: 328px;
+  top: 100px;
 }
 
 #product-items {
   width: 985px;
   margin-top: 83px;
-  position: sticky;
 }
 
 .search-box img {
@@ -92,13 +105,38 @@ nav {
   margin-top: 48px;
   padding-bottom: 50px;
 }
-.menu-card > div {
+
+.menu_card_details > div {
   margin: 11px auto;
 }
+
 .menu-card > div > img {
   width: 100%;
   object-fit: contain;
 }
+
+/* .menu-card-2 {
+  width: 430px;
+  padding-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.menu-card-2 > div > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.menu-card-2-btn {
+
+}
+.menu-card-2 > div:last-child {
+  display: flex;
+  justify-content: center;
+} */
+
+/* .menu_card_details {
+  padding: 10px 24px;
+} */
 
 .dot {
   height: 5px;
@@ -134,4 +172,78 @@ nav {
 }
 .menu_card_title {
   font-weight: 600;
+}
+
+#order-banner {
+  text-align: center;
+  margin-top: 103px;
+  padding: 24px 0px;
+  background-color: #202124;
+  color: white;
+  font-weight: 700;
+  font-style: "Roboto Condensed", sans-serif;
+}
+
+.btn_order {
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #e40026;
+  margin-left: 8px;
+  padding: 11px 40px;
+  border-style: none;
+  border-radius: 25px;
+}
+
+.box_shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* CARD CSS */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  row-gap: 40px;
+  padding-bottom: 48px;
+}
+.card_header_title {
+  padding: 36px 0px 45px;
+}
+.card {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.card .card_img img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+}
+.card .card_details {
+  padding: 10px 24px;
+}
+.card .card_details > div {
+  margin: 11px auto;
+}
+.card_btn_div {
+  text-align: center;
+  margin: 30px 0px 20px;
+}
+.btn_addtoCart {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #e40026;
+  padding: 11px 40px;
+  border-style: none;
+  border-radius: 25px;
+}
+.btn_addtoCart img {
+  padding-left: 10px;
+}
+/* CARD CSS */
+
+#CHIZZA {
+  padding-top: 50px;
 }
