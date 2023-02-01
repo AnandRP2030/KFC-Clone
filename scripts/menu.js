@@ -13,6 +13,7 @@
 
 // document.querySelector("#btn-search").addEventListener("click", fetchData);
 // let query = document.querySelector("#search-value").value;
+
 // console.log(query);
 // if (query != undefined) {
 //   console.log(query);
