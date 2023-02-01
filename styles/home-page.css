@@ -1,105 +1,9 @@
-@import url(//db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed);
+/* @import url(//db.onlinewebfonts.com/c/7de69a716652a3d82e8e7099fa1ec6a2?family=National+2+Condensed);
 
-/* body */
+/* body*/
 body{
     margin: 0;
-    font-family: "National 2 Condensed";
-}
-/* navbar */
-
-.navbar{
-    position:fixed;
-    display: flex;
-    justify-content: space-between;   
-    background-color: white;
-    width: 100%;
-    padding: 25px 11% 25px 6%;
-    box-sizing: border-box;
-    height: 103px;
-    font-family: sans-serif;
-    font-weight: 550;
-    z-index: 10;
-    font-size: .85rem;
-    margin-bottom: 100px;
-    top: 0;   
-}
-
-.nav-checkbtn{
-    display: none;
-}
-
-.navbar *{
-    cursor: pointer;
-}
-
-.navbar-left{
-    display: flex;
-    height: 52px;
-    justify-content: space-around;
-    align-items: center;
-    width: 25%;
-}
-
-.navbar-left *{
-    margin: 0;
-}
-.navbar-left>img{
-    width:65px;
-}
-
-.navbar-right{
-    display: flex;
-    width: 20%;
-    justify-content: space-around;
-    align-items: center;   
-}
-.navbar-right *{
-    margin: 0;
-}
-
-.man-icon{
-    width: 10%;
-}
-
-.navbar-right>img:last-child{
-    width: 50px;
-}
-
-.account{
-    border-right: 1px solid rgb(175, 175, 175);
-    padding-right: 10px;
-    height: 17px;
-}
-
-.sample-body{
-    width: 100%;
-    position: relative;
-    margin-top: 100px;
-}
-
-
-@media screen and (max-width: 800px){
-   
-    .nav-checkbtn {
-        display: block;
-    }
-
-    .hide-item{
-        display: none;
-    }
-    .navbar-right>img:last-child{
-        width: 40px;
-    }
-
-    .navbar-left{
-        justify-content: space-between;
-        align-items: center;
-        width: 56%;
-    }
-
-    .navbar-left>img{
-        width: 60px;
-    }
+    font-family: "National 2 Condensed", sans-serif;
 }
 
 /* Slideshow image */
@@ -131,7 +35,7 @@ body{
     color:  #202124;
 }
 .msg{
-    font-family: "National 2 Condensed";
+    font-family: "National 2 Condensed",sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
@@ -160,7 +64,7 @@ hr {
 }
 .cat-main > h3{
     margin-right: 31px;
-    font-family: "National 2 Condensed";
+    font-family: "National 2 Condensed",sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
@@ -185,7 +89,7 @@ hr {
 .disp-catg >div>h3{
     text-align: center;
     color:  #202124;
-    font-family: "National 2 Condensed";
+    font-family: "National 2 Condensed",sans-serif;
     font-size:1rem;
     font-weight:800;
 }
@@ -194,9 +98,9 @@ hr {
 .mid-div{
     background-color: 
     #e4002b;
-    height: 1053px;
+    height: 1145px;
     margin-top: 50px;
-    font-family: "National 2 Condensed";
+    font-family: "National 2 Condensed",sans-serif;
 }
 .mid-head{
     display: flex;
@@ -204,7 +108,7 @@ hr {
 }
 .mid-h1{
     color: white;
-    font-family: "National 2 Condensed";
+    font-family: "National 2 Condensed",sans-serif;
     font-weight: 700;
 }
 .order-btn{
@@ -251,15 +155,13 @@ hr {
     background-color: white;
 }
 
-.mid-div > h1,p{
-    text-align: center;
-    color: white;
-}
 .mid-div > h1{
     width: 800px;
     margin: auto;
     font-size: 127px;
     font-weight: 800;
+    text-align: center;
+    color: white;
 }
 .mid-div>h4{
     margin-top: 10px;
@@ -271,6 +173,8 @@ hr {
 .mid-div >p{
     font-family: "Helvetica Neue", sans-serif;
     font-size: 17px;
+    text-align: center;
+    color: white;
 }
 .learnmore-btn{
    text-align: center;
@@ -292,27 +196,19 @@ hr {
 }
 
 .mid-imgs {
-    position: relative;
-    top: 0;
-    left: 0;
     overflow: hidden;
-    height: 525px;
+    height: 472px;
     margin-top: -60px;
   }
-  .mid-img1{
-    position: relative;
-    top: 0;
-    left: 0;
+  .mid-img1{ 
     width: 30%;
     margin-left: 8%;
+    z-index: -1;
   }
   .mid-img2{
-    position: absolute;
-    top: 30px;
-    left: 30px;
     width: 80%;
-    margin-left: 6%;
-    margin-top: -100px;
+    margin-left: 8%;
+    margin-top: -500px;
   }
 
 
@@ -361,13 +257,9 @@ hr {
     width: 31.7%;
     height: 370px;
     overflow: hidden;
-    position: relative;
     margin-left: 63%;
     margin-top: -20%;
     z-index: 9;
-}
-.bot-img >img{
-
 }
 .bot-des{
     width: 38%;
@@ -377,7 +269,7 @@ hr {
 }
 .bot-des >h2{
     color:  #202124;
-    font-family: "National 2 Condensed";
+    font-family: "National 2 Condensed", sans-serif;
     font-size:4rem;
     font-weight:800;
 }
@@ -394,6 +286,7 @@ hr {
     background-color: #202124 ;
     height: 550px;
     font-family: "Helvetica Neue", sans-serif;
+    margin-top: -15px;
 } 
 .footer-div >p:first-child{
     padding-top: 6%;
@@ -476,4 +369,4 @@ hr {
   
   .socialmedia-links>a{
     margin-left:10px;
-  }
+  } 
