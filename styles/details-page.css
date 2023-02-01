@@ -39,6 +39,7 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .product-data-box > img {
@@ -113,6 +114,7 @@ body {
     border: none;
     border-radius: 35px;
     font-size: 1rem;
+    cursor: pointer;
 
 }
 
@@ -241,19 +243,22 @@ body {
     background-color: #eee;
 }
 
+
 /* delivery options  */
 .delivery-options-container{
     width: 70%;
+    height: 500px;
+    display: none;
+    top: 100px;
+    left: 15%;
     margin: auto;
     background-color: #f8f7f5;
     box-shadow: rgba(0, 0, 0, 0.20) 1px 1px 10px 0;
-    height: 600px;
-    position: absolute;
-    top: 500px;
+    position: fixed;
     text-align: center;
     box-sizing: border-box;
     overflow: scroll;
-    z-index: 20;
+    z-index: 200;
 }
 .delivery-option-head{
     background-color: white;
@@ -264,6 +269,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.close-delivery-btn{
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.close-delivery-btn>span{
+    font-size: 1.5rem;
 }
 
 .delivery-option-description{
@@ -285,8 +304,6 @@ body {
     display: flex;
     height: 300px;
     position: relative;
-    /* top:40px; */
-    /* background-color: yellow; */
 }
 
 .delivery-img-left, .delivery-img-right{
@@ -345,4 +362,8 @@ body {
     font-family: 'National 2 Condensed', sans-serif;
     font-size: 1.2rem;
     color: gray;
+}
+
+.display-block {
+    display: block;
 }

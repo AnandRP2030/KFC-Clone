@@ -180,3 +180,16 @@ qtyDecrementBtn.onclick = function (){
         qtyCountArea.innerHTML = --qtyCount; 
     }
 }
+
+let deliveryContainer = document.querySelector(".delivery-options-container");
+
+let buyBtn = document.querySelector(".buy-btn");
+buyBtn.onclick = function (){
+    deliveryContainer.classList.add("display-block")
+}
+
+let closeDivBtn = document.querySelector('.close-delivery-btn');
+closeDivBtn.onclick = function (){
+
+    deliveryContainer.classList.remove("display-block");
+}
