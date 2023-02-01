@@ -3,7 +3,7 @@
 /* body*/
 body{
     margin: 0;
-    font-family: "National 2 Condensed", sans-serif;
+    font-family: sans-serif;
 }
 
 /* Slideshow image */
@@ -35,7 +35,7 @@ body{
     color:  #202124;
 }
 .msg{
-    font-family: "National 2 Condensed",sans-serif;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
@@ -56,15 +56,15 @@ hr {
   height: 0.2px;
   background-color: #e3e3e3;
   float: right;
-  width: 65%;
-  margin-left: 350px;
+  width: 59%;
+  margin-left: 430px;
   margin-top: -75px;
   position: absolute;
   opacity: .5;
 }
 .cat-main > h3{
     margin-right: 31px;
-    font-family: "National 2 Condensed",sans-serif;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
@@ -89,7 +89,7 @@ hr {
 .disp-catg >div>h3{
     text-align: center;
     color:  #202124;
-    font-family: "National 2 Condensed",sans-serif;
+    font-family: sans-serif;
     font-size:1rem;
     font-weight:800;
 }
@@ -98,9 +98,9 @@ hr {
 .mid-div{
     background-color: 
     #e4002b;
-    height: 1145px;
+    height: 1004px;
     margin-top: 50px;
-    font-family: "National 2 Condensed",sans-serif;
+    font-family: sans-serif;
 }
 .mid-head{
     display: flex;
@@ -108,7 +108,7 @@ hr {
 }
 .mid-h1{
     color: white;
-    font-family: "National 2 Condensed",sans-serif;
+    font-family: sans-serif;
     font-weight: 700;
 }
 .order-btn{
@@ -116,7 +116,7 @@ hr {
     height: 50px;
     background-color: white;
     border-radius: 2.2rem;
-    margin-top: 10px;
+    margin-top: 15px;
     border: none;
     padding: 5px 30px 5px 30px;
     
@@ -156,15 +156,15 @@ hr {
 }
 
 .mid-div > h1{
-    width: 800px;
+    width: 911px;
     margin: auto;
-    font-size: 127px;
-    font-weight: 800;
+    font-size: 110px;
+    font-weight: 700;
     text-align: center;
     color: white;
 }
 .mid-div>h4{
-    margin-top: 10px;
+    margin-top: 50px;
     font-weight: 400;
     font-size: 17px;
     text-align: center;
@@ -269,9 +269,9 @@ hr {
 }
 .bot-des >h2{
     color:  #202124;
-    font-family: "National 2 Condensed", sans-serif;
+    font-family: sans-serif;
     font-size:4rem;
-    font-weight:800;
+    font-weight:700;
 }
 .bot-des >h5{
     color:  #202124;
