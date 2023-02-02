@@ -4,30 +4,31 @@ export function navbar() {
       <span class="material-symbols-outlined"> menu </span>
     </div>
     <img 
-      src="	https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg
-        "
+      src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" 
       alt="KFC-LOGO"
+      id="navbar-kfc-logo"
     />
-    <p class="hide-item">Menu</p>
-    <p class="hide-item">Deals</p>
+    <p id="navbar-menu" class="hide-item">Menu</p>
+    <p id="navbar-deals" class="hide-item">Deals</p>
+    <p id="navbar-about" class="hide-item">About</p>
   </div>
 
   <div class="navbar-right">
     <img
-      class="man-icon hide-item"
+      class="man-icon hide-item" id="navbar-man-icon"
       src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
       alt="man-icon"
     />
-    <p class="account hide-item">Account</p>
+    <p id="navbar-account" class="account hide-item">Account</p>
 
     <p>₹0.00</p>
-    <img
+    <img id="navbar-cart-bucket"
       src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"
     />
   </div>`;
 }
 
-
+document.querySelector(".navbar").innerHTML = navbar();
 
 //import code sample
 

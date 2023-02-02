@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create An Account</title>
+    <link rel="stylesheet" href="../styles/signup.css">
+</head>
+<body>
+    <div id="heading">
+        <img src="https://www.pngitem.com/pimgs/m/42-429253_kentucky-fried-chicken-kentucky-fried-chicken-logo-text.png">
+    </div>
+    <div id="container">
+        <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg">
+        <h2>Create An Account</h2>
+        <form  id="form"action="">
+        <div>
+            <div>
+                <label for="">Full Name</label><br>
+                <input type="text" id="first" placeholder="Fisrt Name*"><br><br>
+            </div>
+            <!-- <div>
+                <label for="">Last Name</label><br>
+                <input type="text" id="last" placeholder="Last Name*"><br><br>
+            </div> -->
+            
+                <label for="">Email</label><br>
+                <input type="text" id="email" placeholder="Email*"><br><br>
+            </div>
+            <div>
+                <label for="">Phone number</label><br>
+                <input type="number" id="number" placeholder="Phone number*"><br><br>
+            </div>
+            <div>
+                <label for="">Password</label><br>
+                <input type="text" id="password" placeholder="password*"><br><br>
+            </div>
+
+            <!-- <div>
+                <label for="">Confirm Password</label><br>
+                <input type="text" id="confirm" placeholder="confirm password*"><br><br>
+            </div> -->
+
+            <div class="link">By selecting the box you agree to our
+            
+                <span>
+                    <a rel="noreferrer" target="_blank"href="https://www.kfc.com/privacy-policy">Privacy Policy </a>
+                </span>
+                and 
+                <span>
+                    <a rel="noreferrer" target="_blank" href="" class="">Terms of Use</a>
+                </span>
+                <p > Signup for Email updates and Promotions</p> 
+
+             </div><hr>
+               
+
+                  <button class="btn">Create Account</button> 
+        </form>
+        <div >Already a member?
+             <a>Log In</a>
+            <!-- <button class="btn"><b>Log In</b></button>  -->
+        </div>
+    </div>
+</body>
+<script>
+document.querySelector("#form").addEventListener("submit", registrationData);
+var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
+
+var referSignUp = document.querySelector("div>a");
+referSignUp.href = "login.html";
+
+function registrationData(){
+    event.preventDefault();
+
+    // var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
+
+    var formobj = {
+        email: form.email.value,
+        mobile: form.number.value,
+        password: form.password.value,
+        name:form.first.value,
+    }
+    if(formobj.name.length!=0 && formobj.mobile.length!=0 && formobj.email.length!=0 && formobj.password!=0){
+        formData.push(formobj)
+    }else{
+        alert("fill all required detail");
+    }
+    // formData.push(formObj);
+
+    localStorage.setItem("registrationData", JSON.stringify(formData));
+    window.location.href = "login.html";
+}
+
+
+</script>
+</html>

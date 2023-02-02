@@ -3,6 +3,9 @@
 import {navbar} from "../components/navbar/navbar.js";
 document.querySelector(".navbar").innerHTML = navbar();
 
+import {footer} from "../components/footer/footer.js";
+document.querySelector(".footer-div").innerHTML=footer()
+
 // Image Slider
 
 var img = document.querySelector('.img');

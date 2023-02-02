@@ -367,3 +367,10 @@ body {
 .display-block {
     display: block;
 }
+
+/* footer  */
+.footer-div{
+    position: relative;
+    top: 400px;
+    z-index:100;
+}
