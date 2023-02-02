@@ -1,5 +1,11 @@
+//import navbar
 import { navbar } from "../components/navbar/navbar.js";
 document.querySelector(".navbar").innerHTML = navbar();
+// import footer 
+import {footer} from "../components/footer/footer.js"
+document.querySelector(".footer-div").innerHTML = footer();
+
+
 
 // side dish container
 let sideArr = [
@@ -205,3 +211,23 @@ let deliveryPick = document.querySelector(".delivery-btn");
 deliveryPick.onclick = function (){
   window.location.href = "../pages/address-page.html"
 }
+
+
+// stop the fixed box 
+let fixedBox = document.querySelector(".product-data-box");
+let footerArea = document.querySelector(".footer-div");
+
+window.addEventListener("scroll", () => {
+  let footerReact = footerArea.getBoundingClientRect();
+  let fixedBoxReact = fixedBox.getBoundingClientRect();
+  console.log("footer bottom",footerReact.bottom,"box top", fixedBoxReact.top)
+ 
+  console.log(fixedBoxReact.bottom > footerReact.top)
+  if (fixedBoxReact.bottom > footerReact.top+10){
+    fixedBox.style.position = "absolute";
+    fixedBox.style.bottom = `${footerReact.height}px`
+  }else {
+    fixedBox.style.position  = "fixed";
+    fixedBox.style.bottom = "initial";  
+  }
+})  
