@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login.css">
+   
 </head>
 <body>
-    <div class="sign up">
-      <form id="sign-form" accept="">
+    <div id="container">
+      <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="kfc">
         <img src="https://th.bing.com/th/id/OIP.HmxTpJP7ZX6VuCAFlToCaQHaHd?w=186&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="kfc-logo">
-        <h2>Log In  To KFC</h2>
+        <h2>LOG IN TO KFC</h2>
 
-        <form  id="form"action="">
+        <form  id="form">
           <div>
             <label for="">Email</label><br>
             <input type="email" id="email" placeholder="Email"><br><br>
           </div>
           <div>
             <label for="">Password</label><br>
-            <input type="password" id="Password" placeholder="Password"><br><br>
+            <input type="password" id="password" placeholder="Password"><br><br>
           </div>
           <hr>
-          <a href="" id="forgot">Forgot Password</a><hr>
+          <a href="" id="forgot">Forgot password?</a><hr>
           <div class="button"></div>
           <!-- <p>By logging into the application or proceeding as a guest, you agree to our</p> -->
           <div class="para">By logging into the application or proceeding as a guest, you agree to our
@@ -37,10 +39,46 @@
           </div><br><br>
           <button class="btn"><b>Log In</b></button>
           <hr>
-      
+          
       </form>
-      <div>Don't have an account?<a href="signup.html"></a>Join Now</div>
-
+       <div>Don't have an account?
+        <a href="../pages/signup.html">Join Now</a> 
+        </div> 
+        <button class="sign-up-google-btn">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+          alt="google-logo" />
+        <p>Continue with Google</p>
+      </button> 
     </div>
+
 </body>
+<script>
+   document.querySelector("#form").addEventListener("submit",loginform);
+
+     var signupData= JSON.parse(localStorage.getItem("userData"));
+
+    // var referSignUp = document.querySelector("a");
+    // referSignUp.href = "./pages/signup.html";
+  
+  function loginform(){
+    event.preventDefault();
+
+          var loginobj = {
+            email: form.email.value,
+            password: form.password.value
+          }
+          var arr=JSON.parse(localStorage.getItem("userData")) || [];
+           arr.map(function(elem){
+       if(elem.email===loginobj.email && elem.password===loginobj.password ){
+      alert("Signed in sucessfully");
+       localStorage.setItem("login",JSON.stringify(arr));
+
+    }else{
+      alert("Your email and password does not match with our records.");
+    }
+  })
+}
+    
+</script>
 </html>

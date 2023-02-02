@@ -1,3 +1,9 @@
+/* -------------------------------------------- Global CSS */
+body,
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -22,10 +28,21 @@ li {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-nav {
-  height: 171px;
-  background-color: #202124;
+a {
+  color: #494949;
+  text-decoration: none;
 }
+
+a:hover {
+  font-size: 18px;
+  color: #202124;
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+}
+/* -------------------------------------------- Global CSS */
 
 #menupage-body {
   display: flex;
@@ -40,14 +57,18 @@ nav {
   padding: 0px 15px;
 }
 
-#menu-item {
+#menu-items {
   width: 328px;
+  position: fixed;
+  top: 145px;
+  z-index: 1;
 }
 
 #product-items {
   width: 985px;
   margin-top: 83px;
-  position: sticky;
+  margin-left: 275px;
+  z-index: 3;
 }
 
 .search-box img {
@@ -92,13 +113,38 @@ nav {
   margin-top: 48px;
   padding-bottom: 50px;
 }
-.menu-card > div {
+
+.menu_card_details > div {
   margin: 11px auto;
 }
+
 .menu-card > div > img {
   width: 100%;
   object-fit: contain;
 }
+
+/* .menu-card-2 {
+  width: 430px;
+  padding-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.menu-card-2 > div > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.menu-card-2-btn {
+
+}
+.menu-card-2 > div:last-child {
+  display: flex;
+  justify-content: center;
+} */
+
+/* .menu_card_details {
+  padding: 10px 24px;
+} */
 
 .dot {
   height: 5px;
@@ -106,6 +152,7 @@ nav {
   background-color: black;
   border-radius: 50%;
   display: inline-block;
+  margin: 0px 8px;
 }
 
 #btn-Addtocart {
@@ -135,3 +182,127 @@ nav {
 .menu_card_title {
   font-weight: 600;
 }
+
+#order-banner {
+  text-align: center;
+  margin-top: 103px;
+  padding: 24px 0px;
+  background-color: #202124;
+  color: white;
+  font-weight: 700;
+  font-style: "Roboto Condensed", sans-serif;
+}
+
+.btn_order {
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #e40026;
+  margin-left: 8px;
+  padding: 11px 40px;
+  border-style: none;
+  border-radius: 25px;
+}
+
+.box_shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* -------------------------------------------- CARD CSS */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  row-gap: 40px;
+  padding-bottom: 48px;
+}
+.card_header_title {
+  padding: 36px 0px 45px;
+}
+.card {
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.card .card_img img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+}
+.card .card_details {
+  padding: 10px 24px;
+}
+.card .card_details > div {
+  margin: 11px auto;
+}
+.card_btn_div {
+  text-align: center;
+  margin: 30px 0px 20px;
+}
+.btn_addtoCart {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #e40026;
+  padding: 11px 40px;
+  border-style: none;
+  border-radius: 25px;
+}
+.btn_addtoCart img {
+  padding-left: 10px;
+}
+/* -------------------------------------------- CARD CSS */
+
+#CHIZZA,
+#CHICKEN,
+#NEW,
+#BIRYANI,
+#BOX,
+#BURGERS,
+#SNACKS,
+#BEVERAGES {
+  padding-top: 50px;
+}
+
+/* -------------------------------------------- SEARCH-SORT-FILTER-CSS */
+#ssf {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#ssf > div {
+  margin: auto 8px;
+}
+#clear-search {
+  display: none;
+}
+
+#sortby-price {
+  background-color: white;
+  margin: 0px 0px 6px;
+  padding: 8px 17px;
+  border-style: none;
+  border-radius: 25px;
+  border: 1px solid rgb(160, 160, 160);
+}
+
+#sortby-price:hover {
+  border: 2.5px solid #ffc107;
+}
+
+#filterby-veg {
+  background-color: white;
+  margin: 0px 0px 6px;
+  padding: 8px 17px;
+  border-style: none;
+  border-radius: 25px;
+  border: 1px solid rgb(160, 160, 160);
+}
+#filterby-veg:hover {
+  border: 2.5px solid #ffc107;
+}
+
+/* .footer-div {
+  z-index: 1000;
+} */
