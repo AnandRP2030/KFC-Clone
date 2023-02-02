@@ -38,6 +38,10 @@ a:hover {
   color: #202124;
   font-weight: 700;
 }
+
+button {
+  cursor: pointer;
+}
 /* -------------------------------------------- Global CSS */
 
 #menupage-body {
@@ -275,13 +279,28 @@ a:hover {
 }
 
 #sortby-price {
-  display: flex;
   background-color: white;
   margin: 0px 0px 6px;
   padding: 8px 17px;
   border-style: none;
   border-radius: 25px;
   border: 1px solid rgb(160, 160, 160);
+}
+
+#sortby-price:hover {
+  border: 2.5px solid #ffc107;
+}
+
+#filterby-veg {
+  background-color: white;
+  margin: 0px 0px 6px;
+  padding: 8px 17px;
+  border-style: none;
+  border-radius: 25px;
+  border: 1px solid rgb(160, 160, 160);
+}
+#filterby-veg:hover {
+  border: 2.5px solid #ffc107;
 }
 
 /* .footer-div {

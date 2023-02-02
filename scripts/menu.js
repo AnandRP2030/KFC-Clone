@@ -47,6 +47,9 @@ window.onload = () => {
 };
 // Fetch & Display All Menu Data_
 async function fetch_All_Data() {
+  let cartData = JSON.parse(localStorage.getItem("cart-data")) || [];
+  document.querySelector("#navbar-price").innerHTML = "₹" + cartTotal(cartData);
+
   // chizza_
   let url_1 = `https://kfc-menu-api.onrender.com/chizza`;
   let res_1 = await fetch(url_1);
@@ -106,7 +109,6 @@ async function fetch_All_Data() {
 // Fetch & Display All Menu Data_
 function display_All(dataArr, fetchLocation) {
   document.querySelector(fetchLocation).innerHTML = "";
-
   dataArr.forEach((ele) => {
     // CARD_
     let card = document.createElement("div");
@@ -116,6 +118,9 @@ function display_All(dataArr, fetchLocation) {
     let card_img = document.createElement("div");
     card_img.setAttribute("class", "card_img");
     let img = document.createElement("img");
+    ele.Image =
+      ele.Image ||
+      "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K488.jpg?ver=25.08";
     img.src = ele.Image;
 
     // CARD DETAILS_
@@ -238,9 +243,10 @@ async function fetch_All_Data_Sorted() {
 // Utility Functions_1
 function AddToCart(ele) {
   let cartData = JSON.parse(localStorage.getItem("cart-data")) || [];
-  // console.log(ele);
   cartData.push(ele);
   localStorage.setItem("cart-data", JSON.stringify(cartData));
+  let total = cartTotal(cartData);
+  document.querySelector("#navbar-price").innerHTML = "₹" + total;
 }
 
 // Utility Functions_2
@@ -281,13 +287,38 @@ function clearSearch() {
 }
 
 // Utility Functions_4
-function separateRupee(dataArr) {
-  dataArr.forEach((ele) => {
-    let price = ele.price;
-    price = price.substring(1, price.length);
-    console.log(Number(price));
-  });
+// function separateRupee(dataArr) {
+//   dataArr.forEach((ele) => {
+//     let price = ele.price;
+//     price = price.substring(1, price.length);
+//     console.log(Number(price));
+//   });
+// }
+
+// Utility Functions_5
+function cartTotal(dataArr) {
+  let total = dataArr.reduce((acc, ele) => {
+    let price = Number(ele.price.substring(1, ele.price.length));
+    return (acc += price);
+  }, 0);
+
+  return total.toFixed(2);
 }
+
+// Utility Functions_6
+// function filterBy() {
+//   let selected = document.querySelector("#filterby-veg").value;
+
+//   if (selected == "null") {
+//     displayTask(taskData);
+//   } else {
+//     var filteredList = [...taskData].filter(function (ele) {
+//       return ele.veg == selected;
+//     });
+
+//     displayTask(filteredList);
+//   }
+// }
 
 // Fetch & Display For Searched Data_
 document.querySelector("#btn-search").addEventListener("click", onlyQueryData);
@@ -370,6 +401,9 @@ function onlyQueryData() {
       btn.textContent = "Add To Cart";
       let btn_img = document.createElement("img");
       btn_img.src = `https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg`;
+      btn.onclick = function () {
+        AddToCart(ele);
+      };
 
       // Append-All line by line_
       card_img.append(img);
