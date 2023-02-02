@@ -10,11 +10,9 @@ body {
 }
 
 .logo-head{
-    display: flex;
-    justify-content: space-evenly;
-    width: 20%;
-    margin-right: 45%;
-    margin-left: 40%;
+margin-right: 45%;
+margin-left: 48%;
+width: 90px;
 }
 
 .Otp-Container {
