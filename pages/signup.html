@@ -9,40 +9,32 @@
 </head>
 <body>
     <div id="heading">
-        <img src="https://www.pngitem.com/pimgs/m/42-429253_kentucky-fried-chicken-kentucky-fried-chicken-logo-text.png">
+        <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg">
     </div>
     <div id="container">
         <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg">
         <h2>Create An Account</h2>
-        <form  id="form"action="">
-        <div>
-            <div>
+        <form  id="form" method="post"action="" >
+        
+            <div class="form-control">
                 <label for="">Full Name</label><br>
-                <input type="text" id="first" placeholder="Fisrt Name*"><br><br>
+                <input type="text" id="first" placeholder="Fisrt Name*" ><br><br>
             </div>
-            <!-- <div>
-                <label for="">Last Name</label><br>
-                <input type="text" id="last" placeholder="Last Name*"><br><br>
-            </div> -->
-            
+            <div class="form-control">
                 <label for="">Email</label><br>
                 <input type="text" id="email" placeholder="Email*"><br><br>
             </div>
-            <div>
-                <label for="">Phone number</label><br>
+            <div  class="form-control">
+                 <label for="">Phone number</label><br>
                 <input type="number" id="number" placeholder="Phone number*"><br><br>
             </div>
-            <div>
+            <div class="form-control">
                 <label for="">Password</label><br>
                 <input type="text" id="password" placeholder="password*"><br><br>
             </div>
+        
 
-            <!-- <div>
-                <label for="">Confirm Password</label><br>
-                <input type="text" id="confirm" placeholder="confirm password*"><br><br>
-            </div> -->
-
-            <div class="link">By selecting the box you agree to our
+            <!-- <div class="link">By selecting the box you agree to our
             
                 <span>
                     <a rel="noreferrer" target="_blank"href="https://www.kfc.com/privacy-policy">Privacy Policy </a>
@@ -53,10 +45,20 @@
                 </span>
                 <p > Signup for Email updates and Promotions</p> 
 
-             </div><hr>
+             </div><hr> -->
+             <div id="link">
+                <input type="checkbox" id="privacy-policy">
+                <label for="privacy-policy">By selecting the box, you agree to our <a rel="noreferrer" target="_blank"href="https://www.kfc.com/privacy-policy">Privacy Policy 
+            
+                </a> and <a rel="noreferrer" target="_blank" href="" class="">Terms of Use</a>.</label>
+              </div>
+              <div>
+                <input type="checkbox" id="email-updates">
+                <label for="email-updates">Sign up for Email updates and Promotions</label>
+              </div>
                
 
-                  <button class="btn">Create Account</button> 
+                  <button class="btn" type="submit">Create Account</button> 
         </form>
         <div >Already a member?
              <a>Log In</a>
@@ -65,16 +67,11 @@
     </div>
 </body>
 <script>
-document.querySelector("#form").addEventListener("submit", registrationData);
-var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
+     document.querySelector("#form").addEventListener("submit", registrationData);
+    var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
 
-var referSignUp = document.querySelector("div>a");
-referSignUp.href = "login.html";
-
-function registrationData(){
+    function registrationData(){
     event.preventDefault();
-
-    // var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
 
     var formobj = {
         email: form.email.value,
@@ -87,11 +84,14 @@ function registrationData(){
     }else{
         alert("fill all required detail");
     }
-    // formData.push(formObj);
+    
+     formData.push(formobj);
 
     localStorage.setItem("registrationData", JSON.stringify(formData));
-    window.location.href = "login.html";
+    // window.location.href = "login.html";
+
 }
+
 
 
 </script>
