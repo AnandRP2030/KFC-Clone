@@ -21,7 +21,7 @@ export function navbar() {
     />
     <p id="navbar-account" class="account hide-item">Account</p>
 
-    <p>₹0.00</p>
+    <p id="navbar-price">₹0.00</p>
     <img id="navbar-cart-bucket"
       src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"
     />
