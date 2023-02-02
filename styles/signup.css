@@ -1,3 +1,6 @@
+body{
+    font-family: sans-serif;
+}
 #container{
     border: 0px solid rgba(224,7,7);
     box-shadow: rgba(0 , 0 , 0 , 0.24) 0px 3px 8px;
@@ -5,18 +8,23 @@
     width: 35%;
     margin: auto;
     margin-top: 30px;
+    background-color: white;
+    /* margin-left: -2px; */
+    padding: 25px;
 }
 #form{
     border: 0px solid red;
     display: flex;
     flex-direction: column;
     padding: 30px;
+    
+    /* margin-top: 10px; */
 }
 #heading{
     display: flex;
     justify-content: center;
     height: 60px;
-    background-color: rgba(245,236,236);
+    /* background-color: rgba(245,236,236); */
 }
 #container>h2{
     display:flex;
@@ -38,19 +46,84 @@ input{
     border-left: none;
 }
 
-.btn{
+/* .btn{
     border-radius: 15px;
     height: 28px;
     border: none;
-}
-.link{
-    font-size: 13px;
+} */
+#link{
+    font-size: 15px;
+    display: flex;
+    display: inline;
+    text-align: justify;
 }
 p{
 font-size: 12px;
 }
-#check{
+
+
+/* hide warn msgs 
+ */
+
+ .warning-msg{
+    display:none;
+ }
+ .display-block{
+    display: block;
+ }
+ input[type="submit"]{
+    background-color:rgb(221, 217, 217);
+    color:black;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    letter-spacing: 1.5px; 
+    margin-top: 20px;
+    font-weight: bold;
+}
+/* .link{
     display: flex;
-    position: absolute;
-    left: 0;
+    justify-content: center;
+    margin-left: -25px;
+    border: 1px solid red;
+} */
+.link>input{
+    margin-left:-200px;
+    margin-right: 15px;
+}
+.link>label{
+    line-height: 10px;
+     margin-left:-220px;
+    font-size: 15px;
+    width: 40%;
+    /* margin: auto; */
+    
+    
+}
+.link>label>span{
+    font-style: none;
+}
+.link1{
+    margin-top: 10px;
+}
+.link1>input{
+    margin-left:-200px;
+    margin-right: 15px;
+    
+}
+.link1>label{
+    margin-left:-220px;
+    font-size: 15px
+}
+
+
+body{
+    background-image: url('https://th.bing.com/th/id/R.5d10425d1b5dd4743a5d9bf7f3f86c11?rik=SuyZgOR1JKO5jA&riu=http%3a%2f%2fwww.kfcmichigan.com%2fimage%2fkfc_backgroundcompress.jpg&ehk=meq8FHGBfoL1Bsm5FKT%2ba0Qm9qZcDdbHPH7M3cZpMIU%3d&risl=&pid=ImgRaw&r=0');
+}
+
+.p{
+    /* margin-right: 100px; */
+    padding: 30px;
 }

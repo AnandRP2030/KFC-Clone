@@ -1,4 +1,7 @@
-
+   body{
+    font-family:sans-serif;
+   
+   }
     #container{
     border: 0px solid red;
     border-radius: 15px;
@@ -6,7 +9,7 @@
     height: auto;
     width: 35%;
     margin: auto;
-    margin-top: 40%;
+    margin-top: 5%;
     border: none;
 }
 #form{
