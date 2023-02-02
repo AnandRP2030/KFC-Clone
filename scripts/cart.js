@@ -155,5 +155,23 @@ function removeItem (idx){
     cartData.splice(idx, 1);
     displayCartData(cartData);
     localStorage.setItem("cart-data", JSON.stringify(cartData));
+    totalCartAmount()
 }
 
+
+//cart total
+function totalCartAmount (){
+    let cartTotalArea = document.querySelector("#navbar-price");
+    let totalCart;
+     totalCart = cartData.reduce((acc, curr) => {
+        let price = Number (curr.price.substring(1, curr.price.length));
+        return acc += price;
+    
+    },0)
+    
+    totalCart = totalCart.toFixed(2);
+    
+    cartTotalArea.innerHTML = totalCart;
+}
+
+totalCartAmount();
