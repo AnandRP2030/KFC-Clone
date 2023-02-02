@@ -1,82 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create An Account</title>
-    <link rel="stylesheet" href="../styles/signup.css">
-</head>
-<body>
-    <!-- <img src="https://4.bp.blogspot.com/-23u8MntCf0Q/VPDfgMC9-sI/AAAAAAAAAC4/MeesGVq7pFM/s1600/cilfhz3rao6gvrqzzxqh.jpg"  id="Back-Image"> -->
-    <div id="heading">
-        <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg">
-    </div>
-    <div id="container">
-        <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg">
-        <h2>Create An Account</h2>
-        <form  id="form" method="post"action="" >
-        
-            <div class="form-control">
-                <!-- <label for="">Full Name</label><br> -->
-                <div class=" warning-msg name-warning" >Please enter your first name </div>
-                <input type="text" id="first"  placeholder= "Full Name*" required minlength="4" >    <br><br>
-            </div>
-            <div class="form-control">
-                <!-- <label for="">Email</label><br> -->
-                <div class=" warning-msg email-warning">Please enter your Valid email</div>
-                
-                <input type="text" id="email" placeholder="Email*"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
-            </div>
-            <div  class="form-control">
-                 <!-- <label for="">Phone number</label><br> -->
-                 <div class="warning-msg phonenumber-warning" >10 digit Phone Number required</div>
-                <input type="number" id="number" placeholder="Phone number*" pattern="[0-9]" ><br><br>
-            </div>
-            <div class="form-control">
-                <!-- <label for="">Password</label><br> -->
-                <div class=" warning-msg password-warning" >please enter valid password</div>
-                <input type="password" id="password" placeholder="password*" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
-            </div>
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KFC-Sign up</title>
 
-            <!-- <div class="link">By selecting the box you agree to our
-            
-                <span>
-                    <a rel="noreferrer" target="_blank"href="https://www.kfc.com/privacy-policy">Privacy Policy </a>
-                </span>
-                and 
-                <span>
-                    <a rel="noreferrer" target="_blank" href="" class="">Terms of Use</a>
-                </span>
-                <p > Signup for Email updates and Promotions</p> 
+    <link rel="stylesheet" href="../styles/signup.css" />
 
-             </div><hr> -->
-             <div class="link">
-                <input type="checkbox" id="privacy-policy">
-                <label for="privacy-policy">By selecting the box, you agree to our <a rel="noreferrer" target="_blank"href="https://www.kfc.com/privacy-policy"> <span>Privacy Policy </span>
-            
-                </a> and <a rel="noreferrer" target="_blank" href="" class="">Terms of Use</a>.</label>
-              </div>
-              <div class="link1">
-                <input type="checkbox" id="email-updates">
-                <label for="email-updates">Sign up for Email updates and Promotions</label>
-              </div>
-               
+    <!-- favicon  -->
+    <link
+      rel="icon"
+      href="https://cdn.iconscout.com/icon/free/png-256/kfc-2-226243.png?w=128&f=avif"
+    />
+  </head>
+  <body>
+    <div class="kfc-sign-up">
+      <form id="form-id" method="post" action="">
+        <img
+          src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg"
+          alt="kfc-logo"
+        />
 
-              <input type="submit" value="Create Account" id="submit-btn">
-                   <!-- <button class="submit-btn" type="submit">Create Account</button>   -->
-                  <!-- <input type="submit" class="submit-btn" class="input-box" value="Confirm Address" /> -->
-
-        </form>
-        <div class="p">Already a member?
-             <a href="login.html">Login</a>
-              <!-- <button class="btn"><b>Log In</b></button>  -->
+        <div class="alternative-signup">
+          
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            alt="logo"
+          />
+          <img
+            src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png"
+            alt="twitter"
+          />
         </div>
-    </div>
-</body>
-<script src="../scripts/sign-up.js">
 
-</script>
+        <hr class="line" />
+
+        <div class="signup-warning username-warning"></div>
+        <input type="text" placeholder="Full Name" class="username" />
+
+        <div class="signup-warning"></div>
+        <div class="input-container">
+          <input class="place-input" type="text" class="" placeholder="Place" />
+        </div>
+
+        <div class="signup-warning email-warning"></div>
+        <input type="email" class="email-input" placeholder="Email ID" />
+
+        <div class="signup-warning password-warning"></div>
+        <input type="password" placeholder="Password" id="signin-password" />
+
+        <input
+          class="sign-up-submit"
+          target="_blank"
+          type="submit"
+          value="Sign up"
+          />
+          
+          <p class="sign-up-already-ac">
+              Already have an account?
+              <a href="login.html"> <span class="already-ac">Log in</span> </a>
+            </p>
+        </form>
+        <img class="bg-img" src="https://www.kfc.com.gh/assets/images/items/big_deal.jpg" alt="">
+
+    </div>
+
+    <script src="../scripts/sign-up.js"></script>
+  </body>
 </html>
+
+
+ <!-- <img src="https://static.toiimg.com/photo/77778120.cms" alt=""> -->
+    <!-- <img src="https://png.pngtree.com/png-clipart/20220113/ourlarge/pngtree-hand-drawn-cartoon-kfc-fries-png-image_4289545.png" alt=""> -->
+    <!-- <img src="https://www.toonpool.com/user/173/files/fastfood_1554755.jpg" alt=""> -->
+   

@@ -1,129 +1,190 @@
 body{
     font-family: sans-serif;
+    margin: 0;
+    height:750px;
 }
-#container{
-    border: 0px solid rgba(224,7,7);
-    box-shadow: rgba(0 , 0 , 0 , 0.24) 0px 3px 8px;
-    height: 700px;
-    width: 35%;
+
+.kfc-sign-up {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  padding-top: 50px;
+  margin-bottom: 100px;
+  height: 700px;
+}
+
+.kfc-sign-up > form > img {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+#form-id {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 25%;
+    padding: 10px 25px 15px;
+    box-sizing: border-box;
     margin: auto;
-    margin-top: 30px;
-    background-color: white;
-    /* margin-left: -2px; */
-    padding: 25px;
+    margin-top: 100px;
+    position: relative;
+    height: 540px;
+    border-radius: 20px;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+
+    right: 413px;
+    bottom: 114px;
 }
-#form{
-    border: 0px solid red;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    
-    /* margin-top: 10px; */
+
+.bg-img{
+    position: relative;
+    bottom: 500px;
+    left: 660px;
 }
-#heading{
-    display: flex;
-    justify-content: center;
-    height: 60px;
-    /* background-color: rgba(245,236,236); */
+
+#form-id > h1 {
+  font-size: 1.3rem;
+  margin: 0;
 }
-#container>h2{
-    display:flex;
-    justify-content: center;
-    margin-top: -25px;
-    cursor: pointer;
-    margin-left: 30px;
+
+#form-id input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 99%;
+  border-style: none none solid;
+  border-width: 0px 0px 1px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  height: 30px;
+  padding: 10px 0 5px 10px;
+  transition: border-color 0.2s ease 0s;
+ 
 }
-input{
-    padding-left: 10px;
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.input-container {
+  position: relative;
+  top: 15px;
+}
+
+.place-input{
+    position: relative;
+    top: -16px;
+}
+
+.sign-up-submit {
+  width: 100%;
+}
+.input-container input {
+  padding-left: 14%;
+  box-sizing: border-box;
+}
+
+#form-id input[type="submit"] {
+  background-color:  #e4002b;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+#form-id input[type="submit"]:hover {
+   background-color:  black;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+.hide-icon {
+  display: none;
+}
+
+.hr-left {
+  height: 0px;
+  width: 35.5%;
+  position: relative;
+  top: 31px;
+  right: 97px;
+}
+
+
+.sign-up-or {
+  text-align: center;
+  margin: 0;
+  height: 20px;
+  position: relative;
+  top: 10px;
+  display: inline-block;
+}
+
+.alternative-signup {
+  height: 44px;
+  border-radius: 10px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#eee;
+}
+
+.line {
     width: 100%;
-    border-radius: px;
-    border: 1px solid slategrey;
-    height: 20px;
-    background: transparent;
-    border-bottom: 1px solid black;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-}
-
-/* .btn{
-    border-radius: 15px;
-    height: 28px;
-    border: none;
-} */
-#link{
-    font-size: 15px;
-    display: flex;
-    display: inline;
-    text-align: justify;
-}
-p{
-font-size: 12px;
+    height: 1px;
+    position: relative;
+    top: 17px;
 }
 
 
-/* hide warn msgs 
- */
-
- .warning-msg{
-    display:none;
- }
- .display-block{
-    display: block;
- }
- input[type="submit"]{
-    background-color:rgb(221, 217, 217);
-    color:black;
-    height: 50px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 1rem;
-    border: none;
-    letter-spacing: 1.5px; 
-    margin-top: 20px;
-    font-weight: bold;
-}
-/* .link{
-    display: flex;
-    justify-content: center;
-    margin-left: -25px;
-    border: 1px solid red;
-} */
-.link>input{
-    margin-left:-200px;
-    margin-right: 15px;
-}
-.link>label{
-    line-height: 10px;
-     margin-left:-220px;
-    font-size: 15px;
-    width: 40%;
-    /* margin: auto; */
-    
-    
-}
-.link>label>span{
-    font-style: none;
-}
-.link1{
-    margin-top: 10px;
-}
-.link1>input{
-    margin-left:-200px;
-    margin-right: 15px;
-    
-}
-.link1>label{
-    margin-left:-220px;
-    font-size: 15px
+.alternative-signup img {
+  margin-right: 10px;
+  margin-top: 0px;
+  position: relative;
+  width: 25px;
 }
 
 
-body{
-    background-image: url('https://th.bing.com/th/id/R.5d10425d1b5dd4743a5d9bf7f3f86c11?rik=SuyZgOR1JKO5jA&riu=http%3a%2f%2fwww.kfcmichigan.com%2fimage%2fkfc_backgroundcompress.jpg&ehk=meq8FHGBfoL1Bsm5FKT%2ba0Qm9qZcDdbHPH7M3cZpMIU%3d&risl=&pid=ImgRaw&r=0');
+.alternative-signup p {
+  display: inline-block;
 }
 
-.p{
-    /* margin-right: 100px; */
-    padding: 30px;
+.sign-up-already-ac {
+  position: relative;
+  font-size: 14px;
 }
+
+.already-ac {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.kfc-sign-up a {
+  text-decoration: none;
+}
+
+/* form validation  */
+.signup-warning {
+  height: 16px;
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+}
+
