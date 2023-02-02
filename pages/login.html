@@ -56,10 +56,10 @@
 <script>
    document.querySelector("#form").addEventListener("submit",loginform);
 
-    // var signupData= JSON.parse(localStorage.getItem("registrationData"));
+     var signupData= JSON.parse(localStorage.getItem("userData"));
 
-    // var referSignUp = document.querySelector("div>a");
-    // referSignUp.href = "p"
+    // var referSignUp = document.querySelector("a");
+    // referSignUp.href = "./pages/signup.html";
   
   function loginform(){
     event.preventDefault();
@@ -68,11 +68,11 @@
             email: form.email.value,
             password: form.password.value
           }
-          var arr=JSON.parse(localStorage.getItem("registrationData")) || [];
+          var arr=JSON.parse(localStorage.getItem("userData")) || [];
            arr.map(function(elem){
        if(elem.email===loginobj.email && elem.password===loginobj.password ){
       alert("Signed in sucessfully");
-      // localStorage.setItem("login",JSON.stringify(arr));
+       localStorage.setItem("login",JSON.stringify(arr));
 
     }else{
       alert("Your email and password does not match with our records.");
