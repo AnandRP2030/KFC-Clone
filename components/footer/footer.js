@@ -100,3 +100,5 @@ export function footer(){
       /></a>
     </div>`
 }
+
+document.querySelector(".footer-div").innerHTML = footer();
