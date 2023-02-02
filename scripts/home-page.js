@@ -1,10 +1,36 @@
-//navbar import
+//navbar and footer import
 
 import {navbar} from "../components/navbar/navbar.js";
 document.querySelector(".navbar").innerHTML = navbar();
 
 import {footer} from "../components/footer/footer.js";
 document.querySelector(".footer-div").innerHTML=footer()
+
+
+// navbar linking
+document.querySelector("#navbar-kfc-logo").onclick = () => {
+    location.href = "./index.html";
+  };
+  document.querySelector("#navbar-menu").onclick = () => {
+    location.href = "./pages/menu.html";
+  };
+  document.querySelector("#navbar-deals").onclick = () => {
+    location.href = "./pages/deals.html";
+  };
+  document.querySelector("#navbar-about").onclick = () => {
+    location.href = "./pages/about.html";
+  };
+  document.querySelector("#navbar-man-icon").onclick = () => {
+    location.href = "./pages/signup.html";
+  };
+  document.querySelector("#navbar-account").onclick = () => {
+    location.href = "./pages/signup.html";
+  };
+  document.querySelector("#navbar-cart-bucket").onclick = () => {
+    location.href = "./pages/cart.html";
+  };
+
+
 
 // Image Slider
 
@@ -67,7 +93,7 @@ function displayCatg(){
     catgData.map((ele)=>{
         let div=document.createElement("div")
         div.onclick=function(){
-            location.href =ele.link
+            location.href = "./pages/menu.html";
         }
         let img=document.createElement("img")
         img.src=ele.img

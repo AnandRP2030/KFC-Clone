@@ -1,4 +1,8 @@
-
+#loader {
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+}
 /* body*/
 body{
     margin: 0;
