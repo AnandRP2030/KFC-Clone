@@ -1,10 +1,3 @@
-import { navbar } from "../components/navbar/navbar.js";
-document.querySelector(".navbar").innerHTML = navbar();
-
-window.onload = () => {
-  fetch_All_Data();
-};
-
 // --------------ENDPOINTs-------------->
 // let query = chizza;
 // let url = `https://kfc-menu-api.onrender.com/${query}`;
@@ -17,6 +10,41 @@ window.onload = () => {
 // /snacks 7x
 // /beverages 5x
 // --------------ENDPOINTs-------------->
+
+// IMPORT_COMPONENTS_
+import { navbar } from "../components/navbar/navbar.js";
+document.querySelector(".navbar").innerHTML = navbar();
+
+import { footer } from "../components/footer/footer.js";
+document.querySelector(".footer-div").innerHTML = footer();
+
+// PAGELINKING_
+document.querySelector("#navbar-kfc-logo").onclick = () => {
+  location.href = "../index.html";
+};
+document.querySelector("#navbar-menu").onclick = () => {
+  location.href = "../pages/menu.html";
+};
+document.querySelector("#navbar-deals").onclick = () => {
+  location.href = "../pages/deals.html";
+};
+document.querySelector("#navbar-about").onclick = () => {
+  location.href = "../pages/about.html";
+};
+document.querySelector("#navbar-man-icon").onclick = () => {
+  location.href = "../pages/index.html";
+};
+document.querySelector("#navbar-account").onclick = () => {
+  location.href = "../pages/account.html";
+};
+document.querySelector("#navbar-cart-bucket").onclick = () => {
+  location.href = "../pages/cart.html";
+};
+
+// window.onload
+window.onload = () => {
+  fetch_All_Data();
+};
 
 // Fetch & Display All Menu Data_
 async function fetch_All_Data() {
@@ -264,3 +292,83 @@ function onlyQueryData() {
     });
   }
 }
+
+// document
+//   .querySelector("#sortby-price")
+//   .addEventListener("change", fetch_All_Data_Sorted);
+
+// // Fetch & Display All Menu Data (SORTED)_
+// async function fetch_All_Data_Sorted() {
+//   let value = document.querySelector("#sortby-price").value;
+
+//   // chizza_
+//   let url_1 = `https://kfc-menu-api.onrender.com/chizza`;
+//   let res_1 = await fetch(url_1);
+//   let jd_1 = await res_1.json();
+//   let loc_1 = "#CHIZZA > div.card_container";
+
+//   function sortBy(arr,) {
+//     if (value == "l2h") {
+//       arr.sort(function (a, b) {
+//         return b.salary - a.salary;
+//       });
+//       display_All(jd_1, loc_1);
+//     }
+
+//     if (value == "h2l") {
+//       arr.sort(function (a, b) {
+//         return a.salary - b.salary;
+//       });
+//       display_All(jd_1, loc_1);
+//     }
+//   }
+
+//   // chicken-bucket_
+//   let url_2 = `https://kfc-menu-api.onrender.com/chicken-bucket`;
+//   let res_2 = await fetch(url_2);
+//   let jd_2 = await res_2.json();
+//   let loc_2 = "#CHICKEN > div.card_container";
+//   display_All(jd_2, loc_2);
+
+//   // new-launch_
+//   let url_3 = `https://kfc-menu-api.onrender.com/new-launch`;
+//   let res_3 = await fetch(url_3);
+//   let jd_3 = await res_3.json();
+//   let loc_3 = "#NEW > div.card_container";
+//   display_All(jd_3, loc_3);
+
+//   // biriyani-bucket_
+//   let url_4 = `https://kfc-menu-api.onrender.com/biriyani-bucket`;
+//   let res_4 = await fetch(url_4);
+//   let jd_4 = await res_4.json();
+//   let loc_4 = "#BIRYANI > div.card_container";
+//   display_All(jd_4, loc_4);
+
+//   // box-meals_
+//   let url_5 = `https://kfc-menu-api.onrender.com/box-meals`;
+//   let res_5 = await fetch(url_5);
+//   let jd_5 = await res_5.json();
+//   let loc_5 = "#BOX > div.card_container";
+//   display_All(jd_5, loc_5);
+
+//   // burgers_
+//   let url_6 = `https://kfc-menu-api.onrender.com/burgers`;
+//   let res_6 = await fetch(url_6);
+//   let jd_6 = await res_6.json();
+//   let loc_6 = "#BURGERS > div.card_container";
+//   display_All(jd_6, loc_6);
+
+//   // snacks_
+//   let url_7 = `https://kfc-menu-api.onrender.com/snacks`;
+//   let res_7 = await fetch(url_7);
+//   let jd_7 = await res_7.json();
+//   let loc_7 = "#SNACKS > div.card_container";
+//   display_All(jd_7, loc_7);
+
+//   // beverages_
+//   let url_8 = `https://kfc-menu-api.onrender.com/beverages`;
+//   let res_8 = await fetch(url_8);
+//   let jd_8 = await res_8.json();
+//   let loc_8 = "#BEVERAGES > div.card_container";
+//   display_All(jd_8, loc_8);
+// }
