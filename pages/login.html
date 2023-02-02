@@ -1,84 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../styles/login.css">
-   
-</head>
-<body>
-    <div id="container">
-      <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="kfc">
-        <img src="https://th.bing.com/th/id/OIP.HmxTpJP7ZX6VuCAFlToCaQHaHd?w=186&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="kfc-logo">
-        <h2>LOG IN TO KFC</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../styles/login.css" />
 
-        <form  id="form">
-          <div>
-            <label for="">Email</label><br>
-            <input type="email" id="email" placeholder="Email"><br><br>
-          </div>
-          <div>
-            <label for="">Password</label><br>
-            <input type="password" id="password" placeholder="Password"><br><br>
-          </div>
-          <hr>
-          <a href="" id="forgot">Forgot password?</a><hr>
-          <div class="button"></div>
-          <!-- <p>By logging into the application or proceeding as a guest, you agree to our</p> -->
-          <div class="para">By logging into the application or proceeding as a guest, you agree to our
-            <span>
-                <a rel="noreferrer" target="_blank" href="https://kfc.com/privacy-policy" class="">Privacy Policy</a>
-            </span>
-            and
-                <span>
-                    <a rel="noreferrer" target="_blank" href="https://www.kfc.com/terms-of-use">Terms of Use</a>
-                </span>
-
-          </div><br><br>
-          <button class="btn"><b>Log In</b></button>
-          <hr>
-          
-      </form>
-       <div>Don't have an account?
-        <a href="../pages/signup.html">Join Now</a> 
-        </div> 
-        <button class="sign-up-google-btn">
+    <!-- favicon  -->
+    <link
+      rel="icon"
+      href="https://cdn.iconscout.com/icon/free/png-256/kfc-2-226243.png?w=128&f=avif"
+    />
+  </head>
+  <body>
+    <div class="kfc-sign-up">
+      <form id="form-id" method="post" action="">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-          alt="google-logo" />
-        <p>Continue with Google</p>
-      </button> 
+          src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg"
+          alt="kfc-logo"
+        />
+
+        <div class="alternative-signup">
+            <p>Continue with Twitter </p>
+
+          <img
+            src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png"
+            alt="twitter"
+          />
+        </div>
+        <div class="alternative-signup">
+            <p>Continue with Google </p>
+
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            alt="logo"
+          />
+        </div>
+
+        <!-- <hr class="line" /> -->
+
+     
+
+        <div class="signup-warning email-warning"></div>
+        <input type="email" class="email-input" placeholder="Email ID" />
+
+        <div class="signup-warning password-warning"></div>
+        <input type="password" placeholder="Password" id="signin-password" />
+         <a class="forgot" href="#">Forgot Password</a>
+        <input
+          class="sign-up-submit"
+          target="_blank"
+          type="submit"
+          value="Sign up"
+          />
+          
+          <p class="sign-up-already-ac">
+              Don't have an account yet?
+              <a href="signup.html"> <span class="already-ac"> Sign up</span> </a>
+            </p>
+        </form>
+        <img class="bg-img" src="https://imageproxy.wolt.com/menu/menu-images/60768b1edac7d213c1537e7d/86a383a0-7783-11ec-962c-56e521cf7f61_nuggets_9_pcs_meal.jpeg" alt="">
+
     </div>
 
-</body>
-<script>
-   document.querySelector("#form").addEventListener("submit",loginform);
-
-     var signupData= JSON.parse(localStorage.getItem("userData"));
-
-    // var referSignUp = document.querySelector("a");
-    // referSignUp.href = "./pages/signup.html";
-  
-  function loginform(){
-    event.preventDefault();
-
-          var loginobj = {
-            email: form.email.value,
-            password: form.password.value
-          }
-          var arr=JSON.parse(localStorage.getItem("userData")) || [];
-           arr.map(function(elem){
-       if(elem.email===loginobj.email && elem.password===loginobj.password ){
-      alert("Signed in sucessfully");
-       localStorage.setItem("login",JSON.stringify(arr));
-
-    }else{
-      alert("Your email and password does not match with our records.");
-    }
-  })
-}
-    
-</script>
+  </body>
 </html>
