@@ -53,13 +53,18 @@ a:hover {
   padding: 0px 15px;
 }
 
-#menu-item {
+#menu-items {
   width: 328px;
+  position: fixed;
+  top: 145px;
+  z-index: 1;
 }
 
 #product-items {
   width: 985px;
   margin-top: 83px;
+  margin-left: 275px;
+  z-index: 3;
 }
 
 .search-box img {
@@ -256,6 +261,29 @@ a:hover {
   padding-top: 50px;
 }
 
+/* -------------------------------------------- SEARCH-SORT-FILTER-CSS */
+#ssf {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#ssf > div {
+  margin: auto 8px;
+}
 #clear-search {
   display: none;
 }
+
+#sortby-price {
+  display: flex;
+  background-color: white;
+  margin: 0px 0px 6px;
+  padding: 8px 17px;
+  border-style: none;
+  border-radius: 25px;
+  border: 1px solid rgb(160, 160, 160);
+}
+
+/* .footer-div {
+  z-index: 1000;
+} */
