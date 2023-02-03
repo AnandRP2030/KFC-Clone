@@ -372,5 +372,5 @@ body {
 .footer-div{
     position: relative;
     top: 400px;
-    z-index:100;
+    /* z-index:100; */
 }

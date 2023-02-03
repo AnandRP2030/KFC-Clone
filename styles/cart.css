@@ -15,14 +15,25 @@ body {
 .navbar {
   height: 100px;
 }
+
+/* cart count  */
+.cart-count {
+  width: 12px;
+  height: 20px;
+  position: fixed;
+  z-index: 1200;
+  left: 86.5%;
+  top: 44px;
+  font-weight: 700;
+
+}
+
 .head-logo {
   border-style: none;
   width: 200px;
 }
 
-/* !Cart Css */
 
-/* !Right Side */
 
 .start-order-div {
   height: 68px;
@@ -65,7 +76,7 @@ body {
 /* cart container  */
 .cart-container {
   width: 60%;
-  height: 500px;
+  height: auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: relative;
   top: 200px;
@@ -150,12 +161,17 @@ body {
   cursor: pointer;
 }
 
+.item-des{
+  font-size: 13px;
+}
+
+/* checkout form  */
 .checkout-form {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 26%;
   height: 480px;
-  position: relative;
-  bottom: 300px;
+  position: fixed;
+  top: 200px;
   left: 1021px;
   border-radius: 10px;
   padding: 20px 2%;
@@ -235,3 +251,11 @@ input[type="checkbox"] {
   font-size: 1.2rem;
   cursor: pointer;
 }
+
+.footer-div{
+  margin-top: 600px;
+  position: relative;
+  top: 200px;
+}
+
+
