@@ -66,6 +66,9 @@ function displayCartData(cartData) {
     card.setAttribute("class", "cart-item");
     let itemImg = document.createElement("img");
     itemImg.src = elem.Image;
+    itemImg.onclick = () => {
+      addToDetails(elem);
+    };
 
     let rightSideDiv = document.createElement("div");
     rightSideDiv.setAttribute("class", "right-side");
@@ -226,23 +229,6 @@ function cartCount() {
   cart_count.textContent = cartData.length;
 }
 
-// Discount Functionality -
-function getDiscount() {
-  var promocode = document.querySelector("#promo-code > input").value;
-
-  if (promocode == "masai30") {
-    var total = cart.reduce((acc, curr) => {
-      return (acc + curr.price) * curr.qty;
-    }, 0);
-
-    discount = total - total * 0.3;
-    document.querySelector("#subtotal-price").textContent =
-      "₹" + Math.floor(discount);
-  } else {
-    alert("Opps! Wrong Promo Code");
-  }
-}
-
 // Quantity Increament functionality -
 function qtyplus(e) {
   e.qty++;
@@ -270,3 +256,73 @@ function changeAll() {
   document.getElementById("gst-div-total").innerHTML = totalCartAmount();
   document.getElementById("gst-div-subtotal").innerHTML = totalWithGST();
 }
+
+function addToDetails(ele) {
+  let prd_Details = [];
+  prd_Details.push(ele);
+  localStorage.setItem("product-details", JSON.stringify(prd_Details));
+  location.href = "details-page.html";
+}
+
+document.querySelector("#btn-coupon").addEventListener("click", display_2);
+
+function display_2() {
+  document.querySelector("#btn-coupon-div").style.display = "none";
+  document.querySelector("#btn-coupon-apply-div").style.display = "inline";
+}
+
+document
+  .querySelector("#btn-coupon-apply")
+  .addEventListener("click", display_4);
+document
+  .querySelector("#btn-coupon-try")
+  .addEventListener("click", display_4_again);
+
+function display_4_again() {
+  document.querySelector("#btn-coupon-try-div").style.display = "none";
+  document.querySelector("#btn-coupon-apply-div").style.display = "inline";
+}
+
+function display_4() {
+  let val = document.querySelector(
+    "#btn-coupon-apply-div > #get-coupon-value"
+  ).value;
+
+  // console.log(val);
+  let promocode = val;
+  if (promocode == "masai30") {
+    let total = cartData.reduce((acc, curr) => {
+      let price = Number(curr.price.substring(1, curr.price.length));
+      return (acc += price * curr.qty);
+    }, 0);
+
+    let discount = total - total * 0.3;
+    document.querySelector("#gst-div-discount").textContent = 30;
+    document.querySelector("#navbar-price").textContent = discount.toFixed(2);
+    document.querySelector("#gst-div-subtotal").textContent =
+      Math.floor(discount);
+
+    document.querySelector("#btn-coupon-apply-div").style.display = "none";
+    document.querySelector("#success-coupon").style.display = "inline";
+  } else {
+    document.querySelector("#btn-coupon-apply-div").style.display = "none";
+    document.querySelector("#btn-coupon-try-div").style.display = "inline";
+  }
+}
+
+// Discount Functionality -
+// document.querySelector("#btn-coupon").addEventListener("click", display_2);
+// function checkPromo(promocode) {
+//   if (promocode == "masai30") {
+//     var total = cart.reduce((acc, curr) => {
+//       return (acc + curr.price) * curr.qty;
+//     }, 0);
+
+//     discount = total - total * 0.3;
+//     document.querySelector("#subtotal-price").textContent =
+//       "₹" + Math.floor(discount);
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
