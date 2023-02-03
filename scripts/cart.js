@@ -7,10 +7,8 @@ import {footer} from "../components/footer/footer.js"
 document.querySelector(".footer-div").innerHTML = footer();
 
 // quantity change
-
 let qtyCount = 1;
 let qtyCountAreas = document.querySelectorAll(".qty-count");
-
 let qtyIncrementBtns = document.querySelectorAll(".qty-increment");
 
 

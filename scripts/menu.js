@@ -62,6 +62,7 @@ function addAllItems(ele) {
 async function fetch_All_Data() {
   let cartData = JSON.parse(localStorage.getItem("cart-data")) || [];
   document.querySelector("#navbar-price").innerHTML = "₹" + cartTotal(cartData);
+  document.querySelector(".cart-count").innerHTML = cartData.length;
 
   // chizza_
   let url_1 = `https://kfc-menu-api.onrender.com/chizza`;
@@ -148,6 +149,7 @@ function display_All(dataArr, fetchLocation) {
     card_details.setAttribute("class", "card_details");
     let div1 = document.createElement("div");
     div1.setAttribute("class", "card_details_title");
+    ele.title = ele.title || "Peri Peri 5 Leg Pc & 2 Dips";
     div1.textContent = ele.title;
     let div2 = document.createElement("div");
     let span1 = document.createElement("span");
@@ -160,7 +162,18 @@ function display_All(dataArr, fetchLocation) {
     let div3 = document.createElement("div");
     let span_price = document.createElement("span");
     span_price.setAttribute("class", "price");
+    let check = Number(ele.price.substring(1, ele.price.length));
+    if (
+      ele.price == "Non veg  Serves 3" ||
+      ele.price == "Non veg Serves 2" ||
+      ele.price == "old price"
+    ) {
+      console.log("yes");
+      ele.price = `₹370.00`;
+    }
+
     span_price.textContent = ele.price;
+
     let div4 = document.createElement("div");
     div4.textContent = ele.description;
 
@@ -268,6 +281,7 @@ function AddToCart(ele) {
   localStorage.setItem("cart-data", JSON.stringify(cartData));
   let total = cartTotal(cartData);
   document.querySelector("#navbar-price").innerHTML = "₹" + total;
+  document.querySelector(".cart-count").innerHTML = cartData.length;
 }
 
 function addToDetails(ele) {
@@ -313,6 +327,8 @@ document.querySelector("#clear-search").addEventListener("click", clearSearch);
 function clearSearch() {
   location.href = "menu.html";
 }
+
+// Utility Functions_4
 
 // Utility Functions_5
 function cartTotal(dataArr) {
@@ -490,6 +506,8 @@ function display_Query_filtered(dataArr, query) {
     // CARD_
     let card = document.createElement("div");
     card.setAttribute("class", "card");
+    let cardUpPart = document.createElement("div");
+    let cardDownPart = document.createElement("div");
 
     // CARD IMAGE_
     let card_img = document.createElement("div");
@@ -520,6 +538,9 @@ function display_Query_filtered(dataArr, query) {
     let div3 = document.createElement("div");
     let span_price = document.createElement("span");
     span_price.setAttribute("class", "price");
+    if (ele.price == NaN || ele.price == typeof "string") {
+      ele.price = `₹370 .00`;
+    }
     span_price.textContent = ele.price;
     let div4 = document.createElement("div");
     div4.textContent = ele.description;
@@ -544,9 +565,36 @@ function display_Query_filtered(dataArr, query) {
     card_details.append(div1, div2, div3, div4);
     btn.append(btn_img);
     card_btn_div.append(btn);
-    card.append(card_img, card_details, card_btn_div);
+    cardUpPart.append(card_img, card_details);
+    cardDownPart.append(card_btn_div);
+    card.append(cardUpPart, cardDownPart);
     document.querySelector("#query-div").append(card);
   });
+}
+
+document
+  .querySelector("#btn-Addtocart")
+  .addEventListener("click", exclusiveItems_Add2Cart);
+document
+  .querySelector("#exc-img")
+  .addEventListener("click", exclusiveItems_Add2Details);
+
+const excItem = {
+  Image:
+    "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002228.jpg?ver=25.08",
+  description:
+    "Try Allus fav-1 Hot & Crispy Chicken,1 Smoky Red, Reg Popcorn,Spicy Fries & 1 Dip 20gm",
+  price: "₹448.57",
+  title: "The Allu Arjun Combo",
+  veg: "Non veg  ",
+  strikeoff_price: "₹523.00",
+};
+
+function exclusiveItems_Add2Cart() {
+  AddToCart(excItem);
+}
+function exclusiveItems_Add2Details() {
+  addToDetails(excItem);
 }
 
 // OTHER FUNCTIONS IF NEEDED_
@@ -620,7 +668,7 @@ function display_Query_filtered(dataArr, query) {
 //   display_All(arr_8, loc_8);
 // }
 
-// Utility Functions_4
+// Utility Functions_#
 
 // function separateRupee(dataArr) {
 //   dataArr.forEach((ele) => {
@@ -629,4 +677,3 @@ function display_Query_filtered(dataArr, query) {
 //     console.log(Number(price));
 //   });
 // }
-

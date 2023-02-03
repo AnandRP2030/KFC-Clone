@@ -219,6 +219,9 @@ button {
   padding: 36px 0px 45px;
 }
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 8px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -227,7 +230,13 @@ button {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
 }
+.card .card_img img:hover {
+  border: 1px solid orange;
+}
+
 .card .card_details {
   padding: 10px 24px;
 }
@@ -248,6 +257,11 @@ button {
   padding: 11px 40px;
   border-style: none;
   border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn_addtoCart:hover {
+  border: 1px solid orange;
 }
 .btn_addtoCart img {
   padding-left: 10px;
@@ -306,3 +320,13 @@ button {
 /* .footer-div {
   z-index: 1000;
 } */
+
+.cart-count {
+  width: 12px;
+  height: 20px;
+  position: fixed;
+  z-index: 1200;
+  left: 86.5%;
+  top: 42px;
+  font-weight: 700;
+}
