@@ -49,6 +49,7 @@ body{
     width: 12%;
     height: 40px;
     border-radius: 29px;
+    border: none;
     margin-left: 20px;
     font-size: 1rem;
     color: white;
