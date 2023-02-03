@@ -14,9 +14,7 @@ body {
 }
 
 
-.Right-side{
-    border-bottom:120px;
-}
+
 .header-profile-div {
     margin-top: 100px;
     height: 68px;
@@ -40,7 +38,7 @@ p{
     margin-top: 30px;
     padding-left: 50px;
     padding-right: 15px;
-    height: 450px;
+    height: 550px;
 }
 
 .head-wish {
@@ -96,7 +94,7 @@ p{
 }
 .View-menu{
     margin-top: 30px;
-    width: 100px;
+    width: 150px;
     padding: 10px;
     border-radius: 20px;
     background-color: #202124;
@@ -108,7 +106,7 @@ p{
    padding: 20px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 5px;
-    
+    width: 100%;
 }
 
 .get-help{
@@ -137,4 +135,42 @@ p{
 .product1>p{
     margin-top:5px;
     margin-bottom: 5px;
+}
+
+.Order-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 85%;
+    padding: 10px;
+    grid-gap: 10px;
+}
+.inner-container{
+    width:75%;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 5px;
+
+}
+.inner-container>img{
+    width:100%
+}
+.order-his-btn{
+    border:none;
+    background-color: #202124;
+    color:#777779;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.order-his-btn:hover{
+    cursor: pointer;
+    color: #dfdfe0;
+}
+.timer{
+    width:25%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 15px;
+    height: 550px;
 }
