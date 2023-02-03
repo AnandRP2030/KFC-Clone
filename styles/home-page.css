@@ -14,6 +14,180 @@ body{
     font-family: sans-serif;
 }
 
+/* cart count  */
+.cart-count {
+    width: 12px;
+    height: 20px;
+    position: fixed;
+    z-index: 1200;
+    left: 86.5%;
+    top: 44px;
+    font-weight: 700;
+  }
+  
+
+/* header banner  */
+.start-order-div {
+    height: 68px;
+    width: 100%;
+    background-color: #202124;
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .start-order-div > p {
+    color: white;
+    font-family: "National 2 Condensed", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.1px;
+  }
+  
+  .start-order-div > button {
+    background-color: red;
+    width: 12%;
+    height: 40px;
+    border-radius: 29px;
+    margin-left: 20px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  /* start order btn function  */
+
+
+/* delivery options  */
+.delivery-options-container{
+    width: 70%;
+    height: 500px;
+    display: none;
+    top: 100px;
+    left: 15%;
+    margin: auto;
+    background-color: #f8f7f5;
+    box-shadow: rgba(0, 0, 0, 0.20) 1px 1px 10px 0;
+    position: fixed;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: scroll;
+    z-index: 200;
+}
+.display-block{
+    display: block;
+}
+.delivery-option-head{
+    background-color: white;
+    width: 100%;
+    font-family: 'National 2 Condensed', sans-serif;
+    font-size: 1.8rem;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-delivery-btn{
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.close-delivery-btn>span{
+    font-size: 1.5rem;
+}
+
+.delivery-option-description{
+    margin: auto;
+    width: 50%;
+}
+
+.delivery-option-description h2{
+    font-family: 'National 2 Condensed', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 900;
+    
+}
+
+
+.delivery-image{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    height: 300px;
+    position: relative;
+}
+
+.delivery-img-left, .delivery-img-right{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center
+}
+.delivery-img-left{
+    border-right: 1px solid black;
+}
+
+.delivery-img-left *, .delivery-img-right *{
+    margin: auto;
+    display: block;
+}
+
+.delivery-img-left img{
+    width: 30%;
+    height: 100px;
+}
+
+.delivery-img-right img{
+    width: 35%;
+    height: 113px;
+}
+
+
+.delivery-img-left button , .delivery-img-right button{
+    width: 50%;
+    height: 53px;
+    border-radius: 29px;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-family: 'National 2 Condensed', sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.delivery-img-left button:hover , .delivery-img-right button:hover{
+    background-color: #d00707;
+    color: white;
+}
+
+
+
+.or-div{
+    width: 35px;
+    height: 29px;
+    position: relative;
+    top: 188px;
+    left: 48.5%;
+    background-color: #f8f7f5;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'National 2 Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+
+
 /* Gif Video */
 .gif-div > div >video{
     width: 100%;
@@ -114,6 +288,10 @@ hr {
     gap: 25px;
     margin-top: 80px;
 }
+.disp-catg>div{
+    cursor: pointer;
+
+}
 .disp-catg >div>img{
     width: 240px;
     height: 180px;
@@ -131,7 +309,7 @@ hr {
 .mid-div{
     background-color: 
     #e4002b;
-    height: 950px;
+    height: 946px;
     margin-top: 50px;
     font-family:sans-serif;
 }

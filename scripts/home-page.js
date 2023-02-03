@@ -125,3 +125,59 @@ function displayCatg(){
         catg.append(div)
     })
 }
+
+
+// delivery options 
+let deliveryContainer = document.querySelector(".delivery-options-container");
+
+let buyBtn = document.querySelector(".start-order-btn");
+buyBtn.onclick = function (){
+  
+    deliveryContainer.classList.add("display-block")
+}
+
+let closeDivBtn = document.querySelector('.close-delivery-btn');
+closeDivBtn.onclick = function (){
+
+    deliveryContainer.classList.remove("display-block");
+}
+
+let qucikPickBtn = document.querySelector(".quick-pick-btn");
+qucikPickBtn.onclick = function (){
+    window.location.href = "../pages/address-page.html";
+}
+let deliveryBtn = document.querySelector(".delivery-btn");
+deliveryBtn.onclick = function (){
+    window.location.href = "../pages/address-page.html";
+}
+
+
+// navbar cart 
+let cartData = JSON.parse(localStorage.getItem("cart-data")) || []; 
+
+//cart total
+function totalCartAmount (){
+    let cartTotalArea = document.querySelector("#navbar-price");
+    let totalCart;
+     totalCart = cartData.reduce((acc, curr) => {
+        let price = Number (curr.price.substring(1, curr.price.length));
+        return acc += price;
+    
+    },0)
+    
+    totalCart = totalCart.toFixed(2);
+    
+    cartTotalArea.innerHTML = totalCart;
+}
+
+totalCartAmount();
+
+let cartCount = document.querySelector(".cart-count");
+cartCount.innerHTML = cartData.length;
+
+
+// redirection to profile page 
+let navAccount = document.querySelector(".navbar-account");
+navAccount.onclick = function () {
+    // window.location.href = "../pages/"
+} 
