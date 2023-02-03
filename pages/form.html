@@ -90,7 +90,7 @@
             <input type="email" maxlength="30" placeholder="Email Address*" class="email" required>
           
             <div class="contain-btn">
-                <button class="btn">Cancel</button>
+                <button class="btn" onclick="btn1()">Cancel</button>
                 <button class="btn">Submit</button>
             </div>
         </form>
@@ -101,6 +101,10 @@
 <script>
     document.querySelector(".fa-xmark").addEventListener("click",Myfun);
     function Myfun(){
+       window.location.href="profile.html";
+    }
+    document.querySelector(".btn1").addEventListener("click",Myfun1);
+    function Myfun1(){
        window.location.href="profile.html";
     }
 </script>
