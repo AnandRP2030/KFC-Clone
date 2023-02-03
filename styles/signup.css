@@ -188,3 +188,14 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 2px;
 }
 
+#confirm-password{
+  margin-top: 16px;
+}
+
+.sign-up-submit{
+  margin-top: 15px;
+}
+
+#place{
+  width: 100%;
+}
