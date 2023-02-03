@@ -125,3 +125,10 @@ setInterval(function(){
     document.querySelector(".counter").innerHTML= minute+ ":" + second;
  }
 },1000);
+
+
+
+let kfcLogo = document.querySelector("#navbar-kfc-logo")
+kfcLogo.onclick = function (){
+  location.href = "../index.html"
+}
