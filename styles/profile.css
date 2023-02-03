@@ -55,6 +55,7 @@ p {
   margin-bottom: 40px;
   font-size: 35px;
   color: #dfdfe0;
+  width: 250px;
 }
 
 .account-detail > p {
@@ -69,6 +70,7 @@ p {
 
 .account-detail {
   margin-bottom: 50px;
+  width: 198%;
 }
 
 .sign-out-btn {
