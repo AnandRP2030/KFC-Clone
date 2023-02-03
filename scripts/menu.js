@@ -125,6 +125,7 @@ function display_All(dataArr, fetchLocation) {
   document.querySelector(fetchLocation).innerHTML = "";
 
   dataArr.forEach((ele) => {
+    ele.qty = 1;
     // Common localStorage for all data_
     addAllItems(ele);
 
@@ -168,7 +169,6 @@ function display_All(dataArr, fetchLocation) {
       ele.price == "Non veg Serves 2" ||
       ele.price == "old price"
     ) {
-      console.log("yes");
       ele.price = `₹370.00`;
     }
 
@@ -334,7 +334,7 @@ function clearSearch() {
 function cartTotal(dataArr) {
   let total = dataArr.reduce((acc, ele) => {
     let price = Number(ele.price.substring(1, ele.price.length));
-    return (acc += price);
+    return (acc += price) * ele.qty;
   }, 0);
 
   return total.toFixed(2);
@@ -591,6 +591,7 @@ const excItem = {
 };
 
 function exclusiveItems_Add2Cart() {
+  excItem.qty = 1;
   AddToCart(excItem);
 }
 function exclusiveItems_Add2Details() {
