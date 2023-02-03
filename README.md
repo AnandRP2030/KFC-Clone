@@ -1,6 +1,6 @@
 # **KFC-Clone**
 ## **Project Description**
-The goal of KFCClONE was to create a replica of Kfc.com that functions better to the original website. This includes the ability to  browse and menu list,create an account,add to bag, Checkout, Payment Gateway.The project was developed using only HTML, CSS, and JavaScript.
+The goal of KFCCLONE was to create a replica of Kfc.com that functions better to the original website. This includes the ability to  browse and menu list,create an account,add to bag, Checkout, Payment Gateway.The project was developed using only HTML, CSS, and JavaScript.
 ## **Tech stacks used :**
 To create this clone following Tech stack is used by contributors.  
 <br>
