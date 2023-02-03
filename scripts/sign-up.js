@@ -24,10 +24,6 @@ form.addEventListener("submit", function (e){
     let pass = document.querySelector("#signin-password").value;
     let confirmPass = document.querySelector("#confirm-password").value;
 
-  
-
-    
-
     let userNameWarn = document.querySelector(".username-warning");
     let placeWarn = document.querySelector(".place-warning");
     let emailWarn = document.querySelector(".email-warning");
@@ -49,7 +45,6 @@ form.addEventListener("submit", function (e){
         placeWarn.classList.remove("display-block")
     }
 
-   
     if (!email){
         emailWarn.classList.add("display-block");
     }else {
@@ -120,15 +115,16 @@ let otpArr = JSON.parse(localStorage.getItem("otp")) || [];
 
 // otp feature
 function sendOtpToMail(userDataObj) {
-  let name = userDataObj.userName;
-  let mail = userDataObj.email;
+    let name = userDataObj.userName;
+    let mail = userDataObj.email;
   let otp = generateOTP();
-
+  
   let otpObj = {
-    name: name,
-    mail: mail,
-    otp: otp,
-  };
+      name: name,
+      mail: mail,
+      otp: otp,
+    };
+    alert(otpObj.name)
 
   otpArr.push(otpObj);
   localStorage.setItem("otp", JSON.stringify(otpArr));
