@@ -57,7 +57,7 @@ let sideArr = [
 // getOrderHistory();
 
 
-// let Order_Container = document.getElementById("Order-container").innerText;
+ let Order_Container = document.querySelector(".Order-container");
 //  console.log(Order_Container);
 // if(Order_Container === null){
 //     // let Order_Container = document.getElementById("Order-container");
@@ -66,24 +66,42 @@ let sideArr = [
 //     getOrderHistory();
 // }
 
-function getOrderHistory(){
-    let Order_Container = document.getElementById("Order-container");
-   Order_Container.innerHTML = sideArr.map((element)=>{
-     let {Image,description,price,title,veg} = element;
-    return `
-        <div class="inner-container">
-        <img src=${Image} alt="error">
-         <h3>${title}</h3>
-         <p>${description}</p>
-         <h4>${price}</h4>
-         <h5>${veg}</h5>
-        </div>`
+// function getOrderHistory(){
+// //    let Order_Container = document.getElementById("Order-container");
+//    Order_Container.innerHTML = sideArr.map((element)=>{
+//      let {Image,description,price,title,veg} = element;
+//     return `
+//         <div class="inner-container">
+//         <img src=${Image} alt="error">
+//          <h3>${title}</h3>
+//          <p>${description}</p>
+//          <h4>${price}</h4>
+//          <h5>${veg}</h5>
+//         </div>`
 
-  });
+//   });
  
-}
-getOrderHistory();
+// }
+// let x= getOrderHistory();
 
+
+
+function display (arr){
+  arr.forEach((e) => {
+    let struc = `
+    <div class="inner-container">
+    <img src=${e.Image} alt="error">
+     <h3>${e.title}</h3>
+     <p>${e.description}</p>
+     <h4>${e.price}</h4>
+     <h5>${e.veg}</h5>
+    </div>`
+
+    Order_Container.innerHTML += struc;
+  });
+}
+
+display(sideArr)
 
 // .join("")
 
