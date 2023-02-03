@@ -61,3 +61,11 @@ var month=document.querySelector(".month-input")
         location.href = "./pages/profile.html";
     }
   })
+
+
+  let submitBtn = document.querySelector(".submit-btn");
+  submitBtn.addEventListener("click", function (){
+    window.location.href = "../pages/profile.html"
+  })
+
+  
