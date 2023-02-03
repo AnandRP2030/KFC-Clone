@@ -629,3 +629,4 @@ function display_Query_filtered(dataArr, query) {
 //     console.log(Number(price));
 //   });
 // }
+
