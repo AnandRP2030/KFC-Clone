@@ -39,7 +39,7 @@ form.addEventListener("submit", function (e){
         userNameWarn.classList.remove("display-block");
     }
 
-    if (!place){
+    if (!place){    
         placeWarn.classList.add("display-block");
     }else {
         placeWarn.classList.remove("display-block")
@@ -64,7 +64,11 @@ form.addEventListener("submit", function (e){
         localStorage.setItem("userData",JSON.stringify(userDataArr));
         sendOtpToMail(user)
 
-        window.location.href = "../pages/otp.html";
+        setTimeout(changeLocation, 4000);
+        function changeLocation() {
+            window.location.href = "../pages/otp.html";
+
+        }
     }
     
 })
@@ -82,7 +86,6 @@ function typingPass (){
         passwordMatch = true;
         passWarn.classList.remove("display-block")
     }
-
 }
 
 
@@ -102,7 +105,6 @@ function checkPass (){
         if (pass != confirmPass){
             confirmPassWarn.classList.add("display-block");
         }else {
-            // confirmPassWarn.classList.remove("display-block");
             confirmPassWarn.innerHTML = "Password match";
             confirmPassWarn.classList.add("password-match")
         }
@@ -124,7 +126,6 @@ function sendOtpToMail(userDataObj) {
       mail: mail,
       otp: otp,
     };
-    alert(otpObj.name)
 
   otpArr.push(otpObj);
   localStorage.setItem("otp", JSON.stringify(otpArr));
@@ -138,6 +139,7 @@ function sendOtpToMail(userDataObj) {
     .send(serviceId, templateId, { name, mail, otp }, apiKey)
     .then(() => {
         alert('otp send to mail')
+        //  window.location.href = "../pages/otp.html";
     })
     .catch((error) => {
       console.error(error);
