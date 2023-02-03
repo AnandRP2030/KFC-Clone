@@ -84,10 +84,21 @@ submitBtn.onclick = function (){
         let userAddressData = new AddressConstructor (cityName, deliveryAddress, phonenumber, zipCode)
         localStorage.setItem("addressData", JSON.stringify(userAddressData));
 
-        changeMap(cityName);
+        window.location.href = "../pages/payment.html"
+        
+       
     }
     
 }
+
+document.getElementById("city-name").addEventListener("keydown", function (event){
+
+  if (event.key === "Enter"){
+    let city = document.querySelector("#city-name").value
+    changeMap(city);
+    
+  }
+})
 
 
 
@@ -111,6 +122,3 @@ function changeMap(location) {
 
 let submit2 = document.querySelector("#submit-btn");
 
-submit2.onclick = function (){
-  window.location.href = "../pages/payment.html"
-}
