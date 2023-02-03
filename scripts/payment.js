@@ -57,7 +57,7 @@ var month=document.querySelector(".month-input")
         var msg3=document.querySelector("#warning3")
         msg3.textContent="Enter 3-digit CVV"
     }
-    if(inp.value.length==16 && year.value!=2021 && year.value!=2022 && cvv.value.length ==3 && month.value!=null){
+    if(inp.value.length >= 12 && year.value!=2021 && year.value!=2022 && cvv.value.length ==3 && month.value!=null){
         location.href = "./pages/profile.html";
     }
   })

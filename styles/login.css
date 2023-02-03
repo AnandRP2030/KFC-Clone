@@ -200,7 +200,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 .loginBtn {
-  background-color:  #e4002b;
+  background-color:  #000000;
   border: none;
   height: 40px;
   border-radius: 10px;
@@ -209,4 +209,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 400;
   color: white;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
