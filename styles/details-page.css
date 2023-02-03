@@ -6,6 +6,28 @@ body {
   height: 2000px;
 }
 
+/* preloader  */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    overflow: hidden;
+    background: #fff url("https://jolly-hawking-c11904.netlify.app/images/KFC_Loader_Gif.gif") no-repeat center center;
+}
+
+/* cart count  */
+.cart-count {
+    width: 12px;
+    height: 20px;
+    position: fixed;
+    z-index: 1200;
+    left: 86.5%;
+    top: 44px;
+    font-weight: 700;
+  }
+  
+
 .image-container {
   background-color: #f8f7f5;
 }

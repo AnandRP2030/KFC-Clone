@@ -5,7 +5,28 @@ document.querySelector(".navbar").innerHTML = navbar();
 import {footer} from "../components/footer/footer.js"
 document.querySelector(".footer-div").innerHTML = footer();
 
+// preload 
+var loader;
 
+function loadNow(opacity) {
+    if (opacity <= 0) {
+        displayContent();
+    } else {
+        loader.style.opacity = opacity;
+        window.setTimeout(function() {
+            loadNow(opacity - 0.05);
+        }, 100);
+    }
+}
+
+function displayContent() {
+    loader.style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loader = document.getElementById('loader');
+    loadNow(1);
+});
 
 // side dish container
 let sideArr = [
@@ -231,3 +252,37 @@ window.addEventListener("scroll", () => {
     fixedBox.style.bottom = "initial";  
   }
 })  
+
+
+// navbar linking 
+let navKfcLogo = document.querySelector("#navbar-kfc-logo");
+navKfcLogo.onclick = function (){
+  window.location.href = "../index.html"
+}
+
+let navbarMenu = document.querySelector("#navbar-menu");
+navbarMenu.onclick = function (){
+  window.location.href = "../pages/menu.html";
+}
+
+let mainIcon = document.querySelector("#navbar-man-icon");
+mainIcon.onclick = function  (){
+  window.location.href = "../pages/signup.html"
+}
+
+//cart total
+function totalCartAmount (){
+  let cartTotalArea = document.querySelector("#navbar-price");
+  let totalCart;
+   totalCart = cartData.reduce((acc, curr) => {
+      let price = Number (curr.price.substring(1, curr.price.length));
+      return acc += price;
+  
+  },0)
+  
+  totalCart = totalCart.toFixed(2);
+  
+  cartTotalArea.innerHTML = totalCart;
+}
+
+totalCartAmount();
