@@ -44,7 +44,6 @@ document.querySelector(".cart-count").onclick = () => {
   location.href = "../pages/cart.html";
 };
 
-
 // window.onload
 window.onload = () => {
   clearAllItems();
@@ -498,7 +497,7 @@ function display_Query_filtered(dataArr, query) {
   // SEARCH-HEADING_
   document.querySelector(".query-results").innerHTML = "";
   let h3 = document.createElement("h2");
-  h3.innerHTML = `THERE ARE ` + dataArr.length + ` "${query}"`;
+  h3.innerHTML = ` All ${query}`;
   h3.style.marginBottom = "50px";
   document.querySelector(".query-results").append(h3);
 
@@ -534,7 +533,12 @@ function display_Query_filtered(dataArr, query) {
     let div2 = document.createElement("div");
     let span1 = document.createElement("span");
     let span1_img = document.createElement("img");
-    span1_img.src = `https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg`;
+    if (ele.veg === "Veg  ") {
+      span1_img.src = `https://online.kfc.co.in/static/media/Veg_dot_Icon.d1a3902d.svg`;
+    } else {
+      span1_img.src = `https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg`;
+    }
+
     let span2 = document.createElement("span");
     span2.setAttribute("class", "dot");
     let span3 = document.createElement("span");
