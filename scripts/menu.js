@@ -32,14 +32,18 @@ document.querySelector("#navbar-about").onclick = () => {
   location.href = "../pages/about.html";
 };
 document.querySelector("#navbar-man-icon").onclick = () => {
-  location.href = "../pages/index.html";
+  location.href = "../pages/signup.html";
 };
 document.querySelector("#navbar-account").onclick = () => {
-  location.href = "../pages/account.html";
+  location.href = "../pages/profile.html";
 };
 document.querySelector("#navbar-cart-bucket").onclick = () => {
   location.href = "../pages/cart.html";
 };
+document.querySelector(".cart-count").onclick = () => {
+  location.href = "../pages/cart.html";
+};
+
 
 // window.onload
 window.onload = () => {

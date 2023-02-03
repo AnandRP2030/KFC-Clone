@@ -1,31 +1,57 @@
 //import navbar
 import { navbar } from "../components/navbar/navbar.js";
 document.querySelector(".navbar").innerHTML = navbar();
-// import footer 
-import {footer} from "../components/footer/footer.js"
+// import footer
+import { footer } from "../components/footer/footer.js";
 document.querySelector(".footer-div").innerHTML = footer();
 
-// preload 
+// PAGELINKING_
+document.querySelector("#navbar-kfc-logo").onclick = () => {
+  location.href = "../index.html";
+};
+document.querySelector("#navbar-menu").onclick = () => {
+  location.href = "../pages/menu.html";
+};
+document.querySelector("#navbar-deals").onclick = () => {
+  location.href = "../pages/deals.html";
+};
+document.querySelector("#navbar-about").onclick = () => {
+  location.href = "../pages/about.html";
+};
+document.querySelector("#navbar-man-icon").onclick = () => {
+  location.href = "../pages/signup.html";
+};
+document.querySelector("#navbar-account").onclick = () => {
+  location.href = "../pages/profile.html";
+};
+document.querySelector("#navbar-cart-bucket").onclick = () => {
+  location.href = "../pages/cart.html";
+};
+document.querySelector(".cart-count").onclick = () => {
+  location.href = "../pages/cart.html";
+};
+
+// preload
 var loader;
 
 function loadNow(opacity) {
-    if (opacity <= 0) {
-        displayContent();
-    } else {
-        loader.style.opacity = opacity;
-        window.setTimeout(function() {
-            loadNow(opacity - 0.05);
-        }, 100);
-    }
+  if (opacity <= 0) {
+    displayContent();
+  } else {
+    loader.style.opacity = opacity;
+    window.setTimeout(function () {
+      loadNow(opacity - 0.05);
+    }, 100);
+  }
 }
 
 function displayContent() {
-    loader.style.display = 'none';
+  loader.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    loader = document.getElementById('loader');
-    loadNow(1);
+document.addEventListener("DOMContentLoaded", function () {
+  loader = document.getElementById("loader");
+  loadNow(1);
 });
 
 // side dish container
@@ -196,76 +222,76 @@ qtyCountArea.innerHTML = qtyCount;
 
 let qtyIncrementBtn = document.querySelector(".qty-increment");
 qtyIncrementBtn.onclick = function () {
-
   qtyCountArea.innerHTML = ++qtyCount;
 };
 
 let qtyDecrementBtn = document.querySelector(".qty-decrement");
-qtyDecrementBtn.onclick = function (){
-    if (qtyCount > 1){
-        
-        qtyCountArea.innerHTML = --qtyCount; 
-    }
-}
+qtyDecrementBtn.onclick = function () {
+  if (qtyCount > 1) {
+    qtyCountArea.innerHTML = --qtyCount;
+  }
+};
 
 let deliveryContainer = document.querySelector(".delivery-options-container");
 
 let buyBtn = document.querySelector(".buy-btn");
-buyBtn.onclick = function (){
-    deliveryContainer.classList.add("display-block")
-}
+buyBtn.onclick = function () {
+  deliveryContainer.classList.add("display-block");
+};
 
-let closeDivBtn = document.querySelector('.close-delivery-btn');
-closeDivBtn.onclick = function (){
-
-    deliveryContainer.classList.remove("display-block");
-}
-
+let closeDivBtn = document.querySelector(".close-delivery-btn");
+closeDivBtn.onclick = function () {
+  deliveryContainer.classList.remove("display-block");
+};
 
 // redirect to address page
 let quickPick = document.querySelector(".quick-pick-btn");
-quickPick.onclick = function (){
-  window.location.href = "../pages/address-page.html"
-}
+quickPick.onclick = function () {
+  window.location.href = "../pages/address-page.html";
+};
 
 let deliveryPick = document.querySelector(".delivery-btn");
-deliveryPick.onclick = function (){
-  window.location.href = "../pages/address-page.html"
-}
+deliveryPick.onclick = function () {
+  window.location.href = "../pages/address-page.html";
+};
 
-
-// stop the fixed box 
+// stop the fixed box
 let fixedBox = document.querySelector(".product-data-box");
 let footerArea = document.querySelector(".footer-div");
 
 window.addEventListener("scroll", () => {
   let footerReact = footerArea.getBoundingClientRect();
   let fixedBoxReact = fixedBox.getBoundingClientRect();
-  console.log("footer bottom",footerReact.bottom,"box top", fixedBoxReact.top)
- 
-  console.log(fixedBoxReact.bottom > footerReact.top)
-  if (fixedBoxReact.bottom > footerReact.top+10){
+  console.log(
+    "footer bottom",
+    footerReact.bottom,
+    "box top",
+    fixedBoxReact.top
+  );
+
+  console.log(fixedBoxReact.bottom > footerReact.top);
+  if (fixedBoxReact.bottom > footerReact.top + 10) {
     fixedBox.style.position = "absolute";
-    fixedBox.style.bottom = `${footerReact.height}px`
-  }else {
-    fixedBox.style.position  = "fixed";
-    fixedBox.style.bottom = "initial";  
+    fixedBox.style.bottom = `${footerReact.height}px`;
+  } else {
+    fixedBox.style.position = "fixed";
+    fixedBox.style.bottom = "initial";
   }
-})  
+});
 
-
-// navbar linking 
+// navbar linking
 let navKfcLogo = document.querySelector("#navbar-kfc-logo");
-navKfcLogo.onclick = function (){
-  window.location.href = "../index.html"
-}
+navKfcLogo.onclick = function () {
+  window.location.href = "../index.html";
+};
 
 let navbarMenu = document.querySelector("#navbar-menu");
-navbarMenu.onclick = function (){
+navbarMenu.onclick = function () {
   window.location.href = "../pages/menu.html";
-}
+};
 
 let mainIcon = document.querySelector("#navbar-man-icon");
+
 mainIcon.onclick = function  (){
   window.location.href = "../pages/signup.html"
 }
@@ -275,19 +301,21 @@ document.querySelector("#navbar-account").onclick = () => {
 document.querySelector("#navbar-cart-bucket").onclick = () => {
   location.href = "../pages/cart.html";
 };
+
 //cart total
-function totalCartAmount (){
+let cartData = JSON.parse(localStorage.getItem("cart-data")) || [];
+function totalCartAmount() {
   let cartTotalArea = document.querySelector("#navbar-price");
   let totalCart;
-   totalCart = cartData.reduce((acc, curr) => {
-      let price = Number (curr.price.substring(1, curr.price.length));
-      return acc += price;
-  
-  },0)
-  
+  totalCart = cartData.reduce((acc, curr) => {
+    let price = Number(curr.price.substring(1, curr.price.length));
+    return (acc += price);
+  }, 0);
+
   totalCart = totalCart.toFixed(2);
-  
-  cartTotalArea.innerHTML = totalCart;
+  console.log(totalCart);
+  cartTotalArea.innerHTML = "₹" + totalCart;
+  document.querySelector(".cart-count").innerHTML = cartData.length;
 }
 
 totalCartAmount();
