@@ -175,7 +175,7 @@ body {
   margin-left: 30px;
 }
 
-.cart-offer-container {
+.cart-offer-container > div {
   position: relative;
   top: 20px;
   color: red;
@@ -221,7 +221,7 @@ body {
   cursor: pointer;
 }
 
-.cart-offer-container > button {
+.cart-offer-container button {
   border-radius: 9px;
   width: 25%;
   height: 24px;
@@ -288,4 +288,24 @@ input[type="checkbox"] {
   margin-top: 600px;
   position: relative;
   top: 200px;
+}
+
+.cart-item {
+  transition: 0.5s;
+}
+
+.cart-item img:hover {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid orange;
+}
+
+.fa-wand-magic-sparkles {
+  color: green;
+}
+
+.cart-offer-container #btn-coupon-apply-div,
+#btn-coupon-try-div,
+#success-coupon {
+  display: none;
 }

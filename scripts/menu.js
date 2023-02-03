@@ -398,10 +398,15 @@ function display_Query(dataArr, query) {
   document.querySelector("#clear-search").style.display = "inline-block";
 
   // SEARCH-HEADING_
-  document.querySelector(".query-results").innerHTML = "";
   let h3 = document.createElement("h2");
-  h3.innerHTML = `WE FOUND ` + dataArr.length + ` "${query}"`;
   h3.style.marginBottom = "50px";
+  document.querySelector(".query-results").innerHTML = "";
+  if (dataArr.length != undefined) {
+    h3.innerHTML = `WE FOUND ` + dataArr.length + ` "${query}"`;
+  } else {
+    h3.innerHTML = `Sorry, Item Not Available!`;
+  }
+
   document.querySelector(".query-results").append(h3);
 
   // SEARCHED-ITEMS_
