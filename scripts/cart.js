@@ -6,6 +6,32 @@ document.querySelector(".navbar").innerHTML = navbar();
 import { footer } from "../components/footer/footer.js";
 document.querySelector(".footer-div").innerHTML = footer();
 
+// PAGELINKING_
+document.querySelector("#navbar-kfc-logo").onclick = () => {
+  location.href = "../index.html";
+};
+document.querySelector("#navbar-menu").onclick = () => {
+  location.href = "../pages/menu.html";
+};
+document.querySelector("#navbar-deals").onclick = () => {
+  location.href = "../pages/deals.html";
+};
+document.querySelector("#navbar-about").onclick = () => {
+  location.href = "../pages/about.html";
+};
+document.querySelector("#navbar-man-icon").onclick = () => {
+  location.href = "../pages/signup.html";
+};
+document.querySelector("#navbar-account").onclick = () => {
+  location.href = "../pages/profile.html";
+};
+document.querySelector(".checkout-btn").onclick = () => {
+  location.href = "../pages/address-page.html";
+};
+document.querySelector(".cart-count").onclick = () => {
+  location.href = "../pages/cart.html";
+};
+
 // quantity change
 let qtyCount = 1;
 let qtyCountAreas = document.querySelectorAll(".qty-count");
