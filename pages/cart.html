@@ -9,7 +9,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="../styles/cart.css" />
     <link rel="stylesheet" href="../components/navbar/navbar.css" />
-    <link rel="stylesheet" href="../components/footer/footer.css">
+    <link rel="stylesheet" href="../components/footer/footer.css" />
     <!-- bootstarp icon  -->
     <link
       rel="stylesheet"
@@ -49,13 +49,11 @@
     <!-- !Navbar Section -->
     <div class="navbar"></div>
 
-    <div class="cart-count"> 0</div>
+    <div class="cart-count">0</div>
     <div class="start-order-div">
       <p>LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</p>
       <button class="start-order-btn">Start Order</button>
     </div>
-
-
 
     <!-- !Cart Inner Section -->
     <div class="cart-header">
@@ -67,11 +65,11 @@
     </div>
 
     <div class="cart-container">
-        <!-- data importing from js  -->
+      <!-- data importing from js  -->
     </div>
 
     <div class="checkout-form">
-      <h2 class="item-count">4 ITEMS</h2>
+      <h2 class="item-count"><span id="item-count-num">4</span> ITEMS</h2>
       <div class="cart-offer-container">
         <i class="fa-solid fa-heart"></i>
         Apply Offers & Deals
@@ -79,22 +77,22 @@
         <button>View All</button>
       </div>
 
-      <div class="coupon">
+      <!-- <div class="coupon">
         <input type="text" placeholder="">
-      </div>
+      </div> -->
 
       <div class="gst-div">
         <div>
-          <p>Subtotal</p>
-          <p>₹2294.29</p>
+          <p>Total</p>
+          <p>₹<span id="gst-div-total">2294.29</span></p>
         </div>
         <div>
           <p>GST</p>
-          <p>12</p>
+          <p><span id="gst-div-percent">12</span>%</p>
         </div>
         <div>
-          <p>Restaurant Handling (Incl. Taxes)</p>
-          <p>₹37.00</p>
+          <p>Subtotal (Incl. Taxes)</p>
+          <p>₹<span id="gst-div-subtotal">37.00</span></p>
         </div>
       </div>
 
@@ -115,9 +113,7 @@
     </div>
 
     <!-- footer importing  -->
-    <div class="footer-div">
-
-    </div>
+    <div class="footer-div"></div>
 
     <script type="module" src="../scripts/cart.js"></script>
   </body>
