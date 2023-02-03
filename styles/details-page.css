@@ -48,8 +48,7 @@ body {
 }
 
 .product-data-box {
-  /* display: none; */
-  height: 500px;
+  height: 570px;
   width: 27%;
   z-index: 100;
   right: 0px;
@@ -396,3 +395,13 @@ body {
     top: 400px;
     /* z-index:100; */
 }
+
+
+.bev-p{
+    display:flex;
+}
+
+.bev-p>span:last-child{
+    margin-left: 15px;
+}
+

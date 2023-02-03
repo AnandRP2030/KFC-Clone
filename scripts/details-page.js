@@ -4,6 +4,7 @@ document.querySelector(".navbar").innerHTML = navbar();
 // import footer
 import { footer } from "../components/footer/footer.js";
 document.querySelector(".footer-div").innerHTML = footer();
+let boxData = JSON.parse(localStorage.getItem("product-details"));
 
 // PAGELINKING_
 document.querySelector("#navbar-kfc-logo").onclick = () => {
@@ -90,13 +91,17 @@ let sideArr = [
   },
 ];
 
+
+
+
+
 displaySide(sideArr);
 
 function displaySide(sideArr) {
   let side1Container = document.querySelector(".side-dish-1");
   side1Container.innerHTML = "";
 
-  sideArr.forEach((e) => {
+  sideArr.forEach((e) => {  
     let card = document.createElement("div");
     card.setAttribute("class", "side-dish-card");
     let itemImg = document.createElement("img");
@@ -223,12 +228,21 @@ qtyCountArea.innerHTML = qtyCount;
 let qtyIncrementBtn = document.querySelector(".qty-increment");
 qtyIncrementBtn.onclick = function () {
   qtyCountArea.innerHTML = ++qtyCount;
+
+  let fixedPrice = boxData[0].price;
+  fixedPrice =Number(fixedPrice.substring(1, fixedPrice.length));
+
+  let currentPrice = document.querySelector(".box-price");
+  currentPrice.innerHTML = "Price: ₹ "+(qtyCount * fixedPrice).toFixed(2);
+  
+
 };
 
 let qtyDecrementBtn = document.querySelector(".qty-decrement");
 qtyDecrementBtn.onclick = function () {
   if (qtyCount > 1) {
     qtyCountArea.innerHTML = --qtyCount;
+
   }
 };
 
@@ -319,3 +333,20 @@ function totalCartAmount() {
 }
 
 totalCartAmount();
+
+
+
+
+
+// product data box dynamic 
+let boxTitle = document.querySelector(".box-title");
+
+boxTitle.innerHTML = boxData[0].title;
+let boxDes = document.querySelector(".des");
+boxDes.innerHTML = boxData[0].description;
+
+let boxPrice = document.querySelector(".box-price");
+boxPrice.textContent =`Price: ${boxData[0].price}`;
+
+
+//qty

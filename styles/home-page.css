@@ -754,6 +754,9 @@ hr {
     .gif-div > div >video{
         height: 270px;
     }
+    .start-order-div{
+        display: none;
+    }
     .overlay-text{
         font-size: 14px;
     }
