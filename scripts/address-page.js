@@ -109,3 +109,8 @@ function changeMap(location) {
 
 
 
+let submit2 = document.querySelector("#submit-btn");
+
+submit2.onclick = function (){
+  window.location.href = "../pages/payment.html"
+}
