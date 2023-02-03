@@ -25,15 +25,12 @@ body {
   left: 86.5%;
   top: 44px;
   font-weight: 700;
-
 }
 
 .head-logo {
   border-style: none;
   width: 200px;
 }
-
-
 
 .start-order-div {
   height: 68px;
@@ -161,7 +158,7 @@ body {
   cursor: pointer;
 }
 
-.item-des{
+.item-des {
   font-size: 13px;
 }
 
@@ -175,6 +172,7 @@ body {
   left: 1021px;
   border-radius: 10px;
   padding: 20px 2%;
+  margin-left: 30px;
 }
 
 .cart-offer-container {
@@ -186,7 +184,41 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+}
+
+.cart-offer-container-2 {
+  position: relative;
+  /* z-index: -1; */
+  top: 20px;
+  color: red;
+  background-color: #eee;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#get-coupon-value {
+  border: none;
+  border-bottom: 1px solid green;
+  background-color: #eeeeee;
+  padding: 5px;
+}
+
+#get-coupon-value:focus {
+  background-color: #202124;
+  color: white;
+  font-size: 1rem;
+}
+
+#btn-coupon-apply {
+  border: none;
+  border-radius: 9px;
+  width: 25%;
+  height: 24px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
 }
 
 .cart-offer-container > button {
@@ -208,7 +240,7 @@ body {
 .gst-div > div {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .donation-box {
@@ -252,10 +284,8 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.footer-div{
+.footer-div {
   margin-top: 600px;
   position: relative;
   top: 200px;
 }
-
-
