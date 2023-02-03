@@ -1,89 +1,156 @@
-//      document.querySelector("#form").addEventListener("submit", registrationData);
-//     var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
 
-//     function registrationData(){
-//     event.preventDefault();
+var userDataArr = JSON.parse(localStorage.getItem("userData")) || [];
+let form = document.querySelector("#form-id");
+let passwordMatch = false;
 
-//     var formobj = {
-//         email: form.email.value,
-//         mobile: form.number.value,
-//         password: form.password.value,
-//         name:form.first.value,
-//     }
-//     if(formobj.name.length!=0 && formobj.mobile.length!=0 && formobj.email.length!=0 && formobj.password!=0){
-//         formData.push(formobj)
-//     }else{
-//         alert("fill all required detail");
-//     }
-    
-//      formData.push(formobj);
-
-//     localStorage.setItem("registrationData", JSON.stringify(formData));
-//     // window.location.href = "login.html";
-
-// }
-// document.querySelector("#form").addEventListener("submit");
-
-// var referSignUp = document.querySelector("div>a");
-//     referSignUp.href = ""
-
-var formData = JSON.parse(localStorage.getItem("userData")) || [];
-let submitBtn = document.querySelector("#form");
-submitBtn.addEventListener("submit", function (e){
+class UserData{
+    constructor(userName, place, email, pass, confirmPass){
+        this.userName = userName;
+        this.place = place;
+        this.email = email;
+        this.pass = pass;
+        this.confirmPass = confirmPass;
+    }
+}
 
 
+
+form.addEventListener("submit", function (e){
     e.preventDefault()
-    // alert ('d')
     
-    let userName = document.querySelector("#first").value;
-    let Email = document.querySelector("#email").value;
-    let phonenumber = document.querySelector("#number").value;
-    let password = document.querySelector("#password").value;
-    // console.log(userName,Email,phonenumber,password);
+    let userName = document.querySelector(".username").value;
+    let place = document.querySelector(".place-input").value;
+    let email = document.querySelector(".email-input").value;
+    let pass = document.querySelector("#signin-password").value;
+    let confirmPass = document.querySelector("#confirm-password").value;
 
-    alert(userName)
-    let nameWarn = document.querySelector(".name-warning");
+    let userNameWarn = document.querySelector(".username-warning");
+    let placeWarn = document.querySelector(".place-warning");
     let emailWarn = document.querySelector(".email-warning");
-    let phonenumberWarn = document.querySelector(".phonenumber-warning");
-    let passwordWarn = document.querySelector(".password-warning");
+    let passWarn = document.querySelector(".pass-warning");
+    let confirmPassWarn = document.querySelector(".confirm-warning");
+   
+    console.log(userName, place, email, pass, confirmPass)
+    
+
     if (!userName){
-        nameWarn.classList.add("display-block");
+        userNameWarn.classList.add("display-block");
     }else {
-        nameWarn.classList.remove("display-block");
+        userNameWarn.classList.remove("display-block");
     }
 
-    if (!Email){
+    if (!place){
+        placeWarn.classList.add("display-block");
+    }else {
+        placeWarn.classList.remove("display-block")
+    }
+
+    if (!email){
         emailWarn.classList.add("display-block");
     }else {
         emailWarn.classList.remove("display-block")
     }
 
-    if (!phonenumber){
-        phonenumberWarn.classList.add("display-block");
+    if (!pass){
+        passWarn.classList.add("display-block");
     }else {
-        phonenumberWarn.classList.remove("display-block");
+        passWarn.classList.remove("display-block");
     }
 
-    if (!password){
-        passwordWarn.classList.add("display-block");
-    }else {
-        passwordWarn.classList.remove("display-block");
-    }
+    if (userName, place, email, pass, confirmPass, passwordMatch){
+        
+        let user = new UserData (userName, place, email, pass, confirmPass)
+        userDataArr.push(user);
+        localStorage.setItem("userData",JSON.stringify(userDataArr));
+        sendOtpToMail(user)
 
-
-    if (userName && Email && phonenumber && password){
-        let userData = new userConstructor (userName, Email, phonenumber, password)
-        localStorage.setItem("user", JSON.stringify(userData));
-
-        // changeMap(cityName);
+        window.location.href = "../pages/otp.html";
     }
     
 })
-function userConstructor (userName, Email, phonenumber, password){
-    this.userName = userName;
-    this.Email = Email;
-    this.phonenumber = phonenumber;
-    this.password = password;
-  }
-  formData.push(userConstructor);
-//   window.location.href = "login.html";
+
+let pass = document.querySelector("#signin-password");
+
+pass.addEventListener("input", typingPass);
+function typingPass (){
+
+    let pass = document.querySelector("#signin-password").value;
+    let passWarn = document.querySelector(".pass-warning");
+    if (pass.length < 6){
+        passWarn.classList.add("display-block")
+    }else {
+        passwordMatch = true;
+        passWarn.classList.remove("display-block")
+    }
+
+}
+
+
+
+
+let confirmInput = document.querySelector("#confirm-password");
+confirmInput.addEventListener("input", checkPass);
+
+function checkPass (){
+
+    let pass = document.querySelector("#signin-password").value;
+    let confirmPassWarn = document.querySelector(".confirm-warning");
+    let confirmPass = document.querySelector("#confirm-password").value;
+
+    if (pass){
+
+        if (pass != confirmPass){
+            confirmPassWarn.classList.add("display-block");
+        }else {
+            // confirmPassWarn.classList.remove("display-block");
+            confirmPassWarn.innerHTML = "Password match";
+            confirmPassWarn.classList.add("password-match")
+        }
+    }
+}
+
+// sending otp 
+
+let otpArr = JSON.parse(localStorage.getItem("otp")) || [];
+
+// otp feature
+function sendOtpToMail(userDataObj) {
+    let name = userDataObj.userName;
+    let mail = userDataObj.email;
+  let otp = generateOTP();
+  
+  let otpObj = {
+      name: name,
+      mail: mail,
+      otp: otp,
+    };
+    alert(otpObj.name)
+
+  otpArr.push(otpObj);
+  localStorage.setItem("otp", JSON.stringify(otpArr));
+
+  const serviceId = "service_f3nv3am";
+  const templateId = "template_xwrbdho";
+  const apiKey = "8VnLYUKesp8CehjBF";
+
+
+  emailjs
+    .send(serviceId, templateId, { name, mail, otp }, apiKey)
+    .then(() => {
+        alert('otp send to mail')
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("There was an error sending the email. Please try again later.");
+    });
+}
+
+//generate 4 digits otp
+function generateOTP() {
+  var otp = Math.floor(Math.random() * 9000) + 1000;
+  return otp;
+}
+
+
+
+ 
