@@ -172,8 +172,11 @@ function totalCartAmount (){
 
 totalCartAmount();
 
-let cartCount = document.querySelector(".cart-count");
-cartCount.innerHTML = cartData.length;
+setTimeout(cartCount,3000)
+function cartCount() {
+    let cartCount = document.querySelector(".cart-count");
+    cartCount.innerHTML = cartData.length;
+}
 
 
 // redirection to profile page 
