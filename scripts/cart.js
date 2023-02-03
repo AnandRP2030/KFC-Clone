@@ -11,23 +11,23 @@ let qtyCount = 1;
 let qtyCountAreas = document.querySelectorAll(".qty-count");
 let qtyIncrementBtns = document.querySelectorAll(".qty-increment");
 
-// for (let i = 0; i < qtyIncrementBtns.length; i++) {
-//   qtyIncrementBtns[i].onclick = function () {
-//     qtyCount = qtyCountAreas[i].innerHTML;
-//     qtyCountAreas[i].innerHTML = ++qtyCount;
-//   };
-// }
+for (let i = 0; i < qtyIncrementBtns.length; i++) {
+  qtyIncrementBtns[i].onclick = function () {
+    qtyCount = qtyCountAreas[i].innerHTML;
+    qtyCountAreas[i].innerHTML = ++qtyCount;
+  };
+}
 
-// let qtyDecrementBtns = document.querySelectorAll(".qty-decrement");
+let qtyDecrementBtns = document.querySelectorAll(".qty-decrement");
 
-// for (let i = 0; i < qtyDecrementBtns.length; i++) {
-//   qtyDecrementBtns[i].onclick = function () {
-//     qtyCount = qtyCountAreas[i].innerHTML;
-//     if (qtyCount > 1) {
-//       qtyCountAreas[i].innerHTML = --qtyCount;
-//     }
-//   };
-// }
+for (let i = 0; i < qtyDecrementBtns.length; i++) {
+  qtyDecrementBtns[i].onclick = function () {
+    qtyCount = qtyCountAreas[i].innerHTML;
+    if (qtyCount > 1) {
+      qtyCountAreas[i].innerHTML = --qtyCount;
+    }
+  };
+}
 
 let cartData = JSON.parse(localStorage.getItem("cart-data")) || [];
 
@@ -88,8 +88,8 @@ function displayCartData(cartData) {
 
       //change price total for particular Item_;
       //   totalCartAmount(price, "+");
-      //   let pd1 = price * currentQty;
-      //   priceDiv.textContent = "₹" + pd1.toFixed(2);
+      let pd1 = price * currentQty;
+      priceDiv.textContent = "₹" + pd1.toFixed(2);
       qtyplus(elem);
       totalCartAmount();
       changeAll();
@@ -107,8 +107,8 @@ function displayCartData(cartData) {
 
       //change price total for particular Item_;
       //   totalCartAmount(price, "-");
-      //   let pd2 = price * currentQty;
-      //   priceDiv.textContent = "₹" + pd2.toFixed(2);
+      let pd2 = price * currentQty;
+      priceDiv.textContent = "₹" + pd2.toFixed(2);
       qtymin(elem);
       totalCartAmount();
       changeAll();
@@ -161,7 +161,7 @@ function totalCartAmount() {
   let cartTotalArea = document.querySelector("#navbar-price");
   let totalCart = cartData.reduce((acc, curr) => {
     let price = Number(curr.price.substring(1, curr.price.length));
-    return (acc += price) * curr.qty;
+    return (acc += price * curr.qty);
   }, 0);
 
   //   if (plusMin == "-") {
@@ -173,6 +173,7 @@ function totalCartAmount() {
   //   }
 
   totalCart = totalCart.toFixed(2);
+  console.log(totalCart);
   cartTotalArea.innerHTML = "₹" + totalCart;
   return Number(totalCart);
 }
