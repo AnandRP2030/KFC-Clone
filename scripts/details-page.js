@@ -269,7 +269,12 @@ let mainIcon = document.querySelector("#navbar-man-icon");
 mainIcon.onclick = function  (){
   window.location.href = "../pages/signup.html"
 }
-
+document.querySelector("#navbar-account").onclick = () => {
+  location.href = "../pages/profile.html";
+};
+document.querySelector("#navbar-cart-bucket").onclick = () => {
+  location.href = "../pages/cart.html";
+};
 //cart total
 function totalCartAmount (){
   let cartTotalArea = document.querySelector("#navbar-price");
