@@ -24,7 +24,7 @@ KFC (Kentucky Fried Chicken) is an American fast food restaurant chain headquart
 
 ## Screenshots
 #### **Landing Page:**
-
+![Alt text](https://files.slack.com/files-pri/T03EXRYG70E-F04MPRGAS4W/image.png)
 
 <br>
 
@@ -100,16 +100,16 @@ Visit the Deployed version using this <a href="neflify link required here >link<
 ### Keerthi Malini
 - **Github** : Keerthimalini6
 - **Github Link** : https://github.com/Keerthimalini6
-- **Linkedin** :
+- **Linkedin** : https://www.linkedin.com/in/keerthi-malini-698923161
 
 ### Debabrata Hembram
 - **Github** : debabrata-pw08-429
 - **Github Link** : https://github.com/debabrata-pw08-429
-- **Linkedin** :
+- **Linkedin** : https://www.linkedin.com/in/debabrata-hembram-704723184/
 
 ### Ankit Gadhwe
 - **Github** : AnkitGadhwe
 - **Github Link** :https://github.com/AnkitGadhwe
-- **Linkedin** :
+- **Linkedin** :https://www.linkedin.com/in/ankit-gadhwe-47073a192/
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/AnandRP2030/Kfc-clone.svg)](https://github.com/AnandRP2030/KFC-Clone)
