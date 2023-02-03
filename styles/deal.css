@@ -2,6 +2,7 @@
    display: grid;
    grid-template-columns: repeat(3,1fr);
    gap: 20px;
+   margin-top: 30px;
 }
 #container>div{
     height: 470px;
@@ -27,6 +28,70 @@
 }
 .para{
     text-align: center;
+}
+.btn{
+    float: right;
+    border-radius: 100px;
+    width : 100px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: large;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: black;
+}
+.startbtn{
+    /* float: right; */
+    border-radius: 100px;
+    width : 200px;
+    height: 50px;
+    background-color:red;
+    font-weight: bold;
+    font-size: larger;
+    border: 1px solid black;
+}
+.mid{
+    width : 100%;
+    height: 80px;
+    background-color: #202124;
+    color : white ; 
+     padding-top: 3px;
+    margin-top: 15px; 
+    text-align: center;
+    
+  }
+  .deals{
+    text-align: center;
+    color : white ; 
+    margin-top: -170px;
+    font-size: 65px;
+}
+.heading{
+    margin-top: 150px;
+    font-weight: bold;
+}
+#head>p{
+    text-decoration-line: underline;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+/* #head>button{
+    float: right;
+    border-radius: 100px;
+    width : 150px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+} */
+#head{
+    display: flex;
+    justify-content: space-between;
 }
 
 
