@@ -28,7 +28,7 @@ body{
     margin: auto;
     margin-top: 100px;
     position: relative;
-    height: 540px;
+    height: 570px;
     border-radius: 20px;
     box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
 
@@ -186,6 +186,12 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 600;
   position: relative;
   top: 2px;
+  margin-top: 7px;
+  color: red;
+  display: none;
+}
+.display-block{
+  display: block;
 }
 
 #confirm-password{
@@ -196,6 +202,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: 15px;
 }
 
-#place{
-  width: 100%;
+.confirm-warning{
+  position: relative;
+  top: 20px;
 }

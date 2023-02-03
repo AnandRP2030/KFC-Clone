@@ -10,7 +10,6 @@ To create this clone following Tech stack is used by contributors.
 
 * **Email JS**
 * **GoogleFonts**
-* **Chat GPT**
 
 # **Project Status**
 

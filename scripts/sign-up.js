@@ -2,53 +2,92 @@
 var formData = JSON.parse(localStorage.getItem("userData")) || [];
 
 let form = document.querySelector("#form-id");
-submitBtn.addEventListener("submit", function (e){
 
-
+form.addEventListener("submit", function (e){
     e.preventDefault()
     
-    let userName = document.querySelector("#first").value;
-    let Email = document.querySelector("#email").value;
-    let phonenumber = document.querySelector("#number").value;
-    let password = document.querySelector("#password").value;
+    let userName = document.querySelector(".username").value;
+    let place = document.querySelector(".place-input").value;
+    let email = document.querySelector(".email-input").value;
+    let pass = document.querySelector("#signin-password").value;
+    let confirmPass = document.querySelector("#confirm-password").value;
 
-    let nameWarn = document.querySelector(".name-warning");
+
+
+
+    let userNameWarn = document.querySelector(".username-warning");
+    let placeWarn = document.querySelector(".place-warning");
     let emailWarn = document.querySelector(".email-warning");
-    let phonenumberWarn = document.querySelector(".phonenumber-warning");
-    let passwordWarn = document.querySelector(".password-warning");
+    let passWarn = document.querySelector(".pass-warning");
+    let confirmPassWarn = document.querySelector(".confirm-warning");
+   
+    console.log(userName, place, email, pass, confirmPass)
+    
+
     if (!userName){
-        nameWarn.classList.add("display-block");
+        userNameWarn.classList.add("display-block");
     }else {
-        nameWarn.classList.remove("display-block");
+        userNameWarn.classList.remove("display-block");
     }
 
-    if (!Email){
+    if (!place){
+        placeWarn.classList.add("display-block");
+    }else {
+        placeWarn.classList.remove("display-block")
+    }
+
+   
+    if (!email){
         emailWarn.classList.add("display-block");
     }else {
         emailWarn.classList.remove("display-block")
     }
 
-    if (!phonenumber){
-        phonenumberWarn.classList.add("display-block");
+    if (!pass){
+        passWarn.classList.add("display-block");
     }else {
-        phonenumberWarn.classList.remove("display-block");
+        passWarn.classList.remove("display-block");
     }
 
-    if (!password){
-        passwordWarn.classList.add("display-block");
-    }else {
-        passwordWarn.classList.remove("display-block");
-    }
+    
 
 
-    if (userName && Email && phonenumber && password){
-        let userData = new userConstructor (userName, Email, phonenumber, password)
-        localStorage.setItem("user", JSON.stringify(userData));
+    // if (!password){
+    //     passwordWarn.classList.add("display-block");
+    // }else {
+    //     passwordWarn.classList.remove("display-block");
+    // }
 
-        // changeMap(cityName);
-    }
+
+    // if (userName && Email && phonenumber && password){
+    //     let userData = new userConstructor (userName, Email, phonenumber, password)
+    //     localStorage.setItem("user", JSON.stringify(userData));
+
+    //     // changeMap(cityName);
+    // }
     
 })
+
+let confirmInput = document.querySelector("#confirm-password");
+confirmInput.addEventListener("input", function (){
+
+
+    let pass = document.querySelector("#signin-password").value;
+    let confirmPassWarn = document.querySelector(".confirm-warning");
+    let confirmPass = document.querySelector("#confirm-password").value;
+
+    if (pass){
+
+        if (pass != confirmPass){
+            confirmPassWarn.classList.add("display-block");
+        }else {
+            confirmPassWarn.classList.remove("display-block");
+            
+        }
+    }
+}) 
+
+
 function userConstructor (userName, Email, phonenumber, password){
     this.userName = userName;
     this.Email = Email;
@@ -56,3 +95,5 @@ function userConstructor (userName, Email, phonenumber, password){
     this.password = password;
   }
   formData.push(userConstructor);
+
+ 
