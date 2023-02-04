@@ -285,6 +285,7 @@ function AddToCart(ele) {
   let total = cartTotal(cartData);
   document.querySelector("#navbar-price").innerHTML = "₹" + total;
   document.querySelector(".cart-count").innerHTML = cartData.length;
+  alert("Item Added To Cart");
 }
 
 function addToDetails(ele) {
@@ -606,6 +607,7 @@ const excItem = {
 function exclusiveItems_Add2Cart() {
   excItem.qty = 1;
   AddToCart(excItem);
+  alert("Item Added to Cart");
 }
 function exclusiveItems_Add2Details() {
   addToDetails(excItem);
