@@ -13,12 +13,12 @@ document.querySelector("#navbar-kfc-logo").onclick = () => {
 document.querySelector("#navbar-menu").onclick = () => {
   location.href = "../pages/menu.html";
 };
-document.querySelector("#navbar-deals").onclick = () => {
-  location.href = "../pages/deals.html";
-};
-document.querySelector("#navbar-about").onclick = () => {
-  location.href = "../pages/about.html";
-};
+// document.querySelector("#navbar-deals").onclick = () => {
+//   location.href = "../pages/deals.html";
+// };
+// document.querySelector("#navbar-about").onclick = () => {
+//   location.href = "../pages/about.html";
+// };
 document.querySelector("#navbar-man-icon").onclick = () => {
   location.href = "../pages/signup.html";
 };
