@@ -189,3 +189,10 @@ let cartBucket = document.querySelector("#navbar-cart-bucket");
 cartBucket.onclick = function () {
   window.location.href = "../pages/cart.html";
 };
+
+
+// link 
+// let navbarAbout = document.querySelector("#navbar-about");
+// navbarAbout.onclick = function (){
+//   window.location.href = ""
+// }
