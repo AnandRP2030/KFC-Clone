@@ -1,6 +1,22 @@
 # **KFC-Clone**
 ## **Project Description**
-The goal of KFCCLONE was to create a replica of Kfc.com that functions better to the original website. This includes the ability to  browse and menu list,create an account,add to bag, Checkout, Payment Gateway.The project was developed using only HTML, CSS, and JavaScript.
+
+
+The aim of this project is to develop a KFC clone website with a modern and user-friendly interface. The website will include the following features:
+
+Workflow: The website will have a well-defined workflow that allows users to place orders, view their order history, and make payments.
+
+Login Page: The login page will allow users to log in using their email and password. If a user does not have an account, they will be able to sign up for one.
+
+Home Page: The home page will display a menu of items available for order and will allow users to place orders directly from the homepage.
+
+Menu Page: The menu page will provide a comprehensive list of all items available for order. Users will be able to filter items based on their preferences and dietary restrictions.
+
+Payment Page: The payment page will allow users to make payments using a variety of methods, including credit/debit cards, PayPal, and cash on delivery.
+
+Order History Page: The order history page will allow users to view a record of their past orders, including the date and time of the order, items ordered, and payment details.
+
+The website will be developed using a modern web framework and will be optimized for both desktop and mobile devices. The design of the website will be sleek and modern, with a focus on ease of use and a fast loading time.
 ## **Tech stacks used :**
 To create this clone following Tech stack is used by contributors.  
 <br>
