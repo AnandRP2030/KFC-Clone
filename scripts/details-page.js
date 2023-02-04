@@ -242,7 +242,7 @@ let qtyDecrementBtn = document.querySelector(".qty-decrement");
 qtyDecrementBtn.onclick = function () {
   if (qtyCount > 1) {
     qtyCountArea.innerHTML = --qtyCount;
-    
+
     let fixedPrice = boxData[0].price;
     fixedPrice =Number(fixedPrice.substring(1, fixedPrice.length));
   
