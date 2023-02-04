@@ -298,6 +298,11 @@ hr {
     height: 180px;
     border-radius: 3px;
 }
+
+#blog{
+    text-decoration: none;
+    color: black;
+}
 .disp-catg >div>h3{
     text-align: center;
     color:  #202124;
@@ -747,6 +752,9 @@ hr {
     }
     
 }
+
+
+
 
 @media all and (max-width: 601px) and (min-width: 200px) {
     /* Small Screen Styles  */

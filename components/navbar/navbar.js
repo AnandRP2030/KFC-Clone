@@ -9,8 +9,8 @@ export function navbar() {
       id="navbar-kfc-logo"
     />
     <p id="navbar-menu" class="hide-item">Menu</p>
-    <p id="navbar-deals" class="hide-item">Deals</p>
-    <p id="navbar-about" class="hide-item">About</p>
+    <a id="blog" href="https://medium.com/@ankitgadhwe3830/dba6202d9380"><p id="navbar-about" class="hide-item">About</p> </a> 
+    <a id="blog" href="#"><p id="navbar-about" class="hide-item">Deals</p> </a> 
   </div>
 
   <div class="navbar-right">
