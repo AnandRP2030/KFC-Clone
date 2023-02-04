@@ -82,7 +82,7 @@ Clone down this repository using this <a href="https://github.com/AnandRP2030/KF
 <hr/>
 
 ## See Live
-Visit the Deployed version using this <a href="neflify link required here >link</a>  
+Visit the Deployed version using this <a href="my-kfc-clone3.netlify.app">link</a>  
 <hr/>
 
 ## Team Members and Contributors
