@@ -181,9 +181,9 @@ function cartCount() {
 
 // redirection to profile page
 let navAccount = document.querySelector(".navbar-account");
-navAccount.onclick = function () {
-  // window.location.href = "../pages/"
-};
+// navAccount.onclick = function () {
+//   // window.location.href = "../pages/"
+// };
 
 let cartBucket = document.querySelector("#navbar-cart-bucket");
 cartBucket.onclick = function () {
