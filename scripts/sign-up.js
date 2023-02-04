@@ -138,7 +138,7 @@ function sendOtpToMail(userDataObj) {
   emailjs
     .send(serviceId, templateId, { name, mail, otp }, apiKey)
     .then(() => {
-        alert('otp send to mail')
+        
         //  window.location.href = "../pages/otp.html";
     })
     .catch((error) => {
