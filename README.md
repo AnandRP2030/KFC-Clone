@@ -95,7 +95,7 @@ Visit the Deployed version using this <a href="https://my-kfc-clone3.netlify.app
 ### Ruchi Upadhyay
 - **Github** : warriorruchi
 - **Github Link** : https://github.com/warriorruchi
-- **Linkedin** : https://www.linkedin.com/in/Ruchiupadhyay/
+- **Linkedin** :https://www.linkedin.com/in/ruchi-upadhyay-843a9021a
 
 ### Keerthi Malini
 - **Github** : Keerthimalini6
